@@ -86,8 +86,13 @@ public class cadastro_evento extends javax.swing.JFrame {
         jtxtf_Codigo.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Codigo.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
         jtxtf_Codigo.setForeground(new java.awt.Color(135, 79, 255));
-        jtxtf_Codigo.setText("C-0000");
+        jtxtf_Codigo.setText("Renan Lindao");
         jtxtf_Codigo.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(135, 79, 255)));
+        jtxtf_Codigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtf_CodigoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jtxtf_Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
 
         jlbl_Nome_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -325,6 +330,10 @@ public class cadastro_evento extends javax.swing.JFrame {
         salvar.setVisible(true);
         cadastro_evento.this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jlbl_BTN_SalvarMouseClicked
+
+    private void jtxtf_CodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtf_CodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtf_CodigoActionPerformed
 
     /**
      * @param args the command line arguments
