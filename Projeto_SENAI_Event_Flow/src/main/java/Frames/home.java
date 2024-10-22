@@ -157,7 +157,7 @@ public class home extends javax.swing.JFrame {
         jlbl_Event.setText("EVENT");
         getContentPane().add(jlbl_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 200, -1));
 
-        jlbl_Branco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retang-branco.png"))); // NOI18N
+        jlbl_Branco.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-branco.png")); // NOI18N
         getContentPane().add(jlbl_Branco, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 290, -1));
 
         jlbl_Flow.setBackground(new java.awt.Color(135, 79, 255));
@@ -171,13 +171,13 @@ public class home extends javax.swing.JFrame {
         jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
         getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, -1));
 
-        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo.png"))); // NOI18N
+        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
 
-        jlbl_Roxo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retang-roxo.png"))); // NOI18N
+        jlbl_Roxo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
         getContentPane().add(jlbl_Roxo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 190, 320, -1));
 
-        jpnl_Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/jpnl_Dark_Gray.jpeg"))); // NOI18N
+        jpnl_Fundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_Dark_Gray.jpeg")); // NOI18N
         jpnl_Fundo.setFocusable(false);
         jpnl_Fundo.setInheritsPopupMenu(false);
         getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
