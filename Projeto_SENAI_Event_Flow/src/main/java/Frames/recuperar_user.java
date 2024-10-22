@@ -50,7 +50,12 @@ public class recuperar_user extends javax.swing.JFrame {
         setName("recuperar_user"); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlbl_Salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_salvar.png"))); // NOI18N
+        jlbl_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_salvar.png")); // NOI18N
+        jlbl_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlbl_SalvarMouseClicked(evt);
+            }
+        });
         getContentPane().add(jlbl_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, -1, -1));
 
         jpswdf_Confirmar_Password.setBackground(new java.awt.Color(255, 255, 255));
@@ -62,6 +67,7 @@ public class recuperar_user extends javax.swing.JFrame {
         getContentPane().add(jpswdf_Confirmar_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 240, -1));
 
         jlbl_Confirmar_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Confirmar_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Confirmar_Senha.setText("Confirme a senha");
         getContentPane().add(jlbl_Confirmar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
 
@@ -74,6 +80,7 @@ public class recuperar_user extends javax.swing.JFrame {
         getContentPane().add(jpswdf_Novo_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 240, -1));
 
         jlbl_Nova_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Nova_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Nova_Senha.setText("Nova senha");
         getContentPane().add(jlbl_Nova_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
 
@@ -90,10 +97,12 @@ public class recuperar_user extends javax.swing.JFrame {
         getContentPane().add(jtxtf_Codigo_Confirmacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 240, -1));
 
         jlbl_Codigo_Confirmacao.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Codigo_Confirmacao.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Codigo_Confirmacao.setText("Código confirmação");
         getContentPane().add(jlbl_Codigo_Confirmacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
         jlbl_por_que.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_por_que.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_por_que.setText("Por que ");
         getContentPane().add(jlbl_por_que, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
@@ -103,6 +112,7 @@ public class recuperar_user extends javax.swing.JFrame {
         getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, -1));
 
         jlbl_da_festa.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_da_festa.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_da_festa.setText("da festa");
         getContentPane().add(jlbl_da_festa, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
 
@@ -118,11 +128,11 @@ public class recuperar_user extends javax.swing.JFrame {
         jlbl_Flow.setText("FLOW");
         getContentPane().add(jlbl_Flow, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 180, -1));
 
-        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo.png"))); // NOI18N
+        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         jpnl_Fundo.setBackground(java.awt.Color.darkGray);
-        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 620));
+        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,6 +140,12 @@ public class recuperar_user extends javax.swing.JFrame {
     private void jtxtf_Codigo_ConfirmacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtf_Codigo_ConfirmacaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtf_Codigo_ConfirmacaoActionPerformed
+
+    private void jlbl_SalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbl_SalvarMouseClicked
+        home telaHomer = new home();
+        telaHomer.setVisible(true);
+        recuperar_user.this.dispose();
+    }//GEN-LAST:event_jlbl_SalvarMouseClicked
 
     /**
      * @param args the command line arguments
