@@ -271,10 +271,10 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_Perfil.setText("IMAGEM");
         getContentPane().add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
 
-        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\imagem.png")); // NOI18N
+        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\imagem.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
+        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\logo.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, -1, -1));
 
         jlbl_IMG_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
@@ -283,7 +283,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_IMG_Cadastrar.setText("CADASTRAR");
         getContentPane().add(jlbl_IMG_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, 60));
 
-        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
+        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\retang-roxo.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Fundo_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 310, -1));
 
         jlbl_IMG_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -292,7 +292,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_IMG_Evento.setText("EVENTO");
         getContentPane().add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 22, 180, 60));
 
-        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_salvar.png")); // NOI18N
+        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_salvar.png")); // NOI18N
         jlbl_BTN_Salvar.setToolTipText("");
         jlbl_BTN_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -301,15 +301,15 @@ public class cadastro_evento extends javax.swing.JFrame {
         });
         getContentPane().add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
 
-        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_excluir.png")); // NOI18N
+        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_excluir.png")); // NOI18N
         jlbl_BTN_Excluir.setToolTipText("");
         getContentPane().add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_buscar.png")); // NOI18N
+        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_buscar.png")); // NOI18N
         jlbl_BTN_Buscar.setToolTipText("");
         getContentPane().add(jlbl_BTN_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, -1, -1));
 
-        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_fundo.png")); // NOI18N
+        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\jpnl_fundo.png")); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
         getContentPane().add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, -1));
 

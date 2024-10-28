@@ -757,7 +757,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_IMG_Perfil">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\imagem.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\imagem.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -769,7 +769,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_IMG_Logo_EF">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\logo.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\logo.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -800,7 +800,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_IMG_Fundo_Cadastrar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\retang-roxo.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\retang-roxo.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -831,7 +831,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_BTN_Salvar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\btn_salvar.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\btn_salvar.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
@@ -847,7 +847,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_BTN_Excluir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\btn_excluir.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\btn_excluir.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
@@ -860,7 +860,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_BTN_Buscar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\btn_buscar.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\btn_buscar.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
@@ -873,7 +873,7 @@
     <Component class="javax.swing.JLabel" name="jlbl_FUNDO">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\jpnl_fundo.png"/>
+          <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\Projeto_SENAI_Event_Flow\src\main\resources\jpnl_fundo.png"/>
         </Property>
         <Property name="name" type="java.lang.String" value="cadastro_evento" noResource="true"/>
       </Properties>
