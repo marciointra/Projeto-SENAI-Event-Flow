@@ -4,8 +4,8 @@ Frames\recuperar_user$1.class
 Frames\Tela_Pesquisa_Eventos$3.class
 Frames\cadastro_expositor$2.class
 Frames\home$1.class
-Frames\Tela_Pesquisa_Eventos$1.class
-Frames\Tela_Pesquisa_Eventos.class
+Frames\cadastro_user$6.class
+Frames\recuperar_user$3.class
 Frames\cadastro_fornecedor$1.class
 Frames\Tela_Pesquisa_Eventos$5.class
 Frames\recuperar_user.class
@@ -33,3 +33,4 @@ Frames\cadastro_user$5.class
 Frames\recuperar_user$2.class
 Frames\cadastro_fornecedor$4.class
 Frames\home.class
+com\mycompany\projeto_senai_event_flow\Projeto_SENAI_Event_Flow.class

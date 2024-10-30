@@ -81,11 +81,12 @@ public class home extends javax.swing.JFrame {
                 jbtn_CadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, -1, -1));
+        getContentPane().add(jbtn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, -1, -1));
 
         jlbl_Email.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Email.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Email.setText("Email");
-        getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, -1));
+        getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, -1, -1));
 
         jtxtf_Email.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Email.addActionListener(new java.awt.event.ActionListener() {
@@ -93,25 +94,27 @@ public class home extends javax.swing.JFrame {
                 jtxtf_EmailActionPerformed(evt);
             }
         });
-        getContentPane().add(jtxtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 180, -1));
+        getContentPane().add(jtxtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 180, -1));
 
         jlbl_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Senha.setText("Senha");
-        getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+        getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
         jpswdf_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Password.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
         jpswdf_Password.setText("jPasswordField1");
-        getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 180, -1));
+        getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 180, -1));
 
         jckb_Lembrar_Senha.setFont(new java.awt.Font("Arial", 1, 9)); // NOI18N
+        jckb_Lembrar_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jckb_Lembrar_Senha.setText("Lembrar senha");
         jckb_Lembrar_Senha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jckb_Lembrar_SenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(jckb_Lembrar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, -1));
+        getContentPane().add(jckb_Lembrar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, -1, -1));
 
         jbtn_Entrar.setBackground(new java.awt.Color(135, 79, 255));
         jbtn_Entrar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -125,11 +128,12 @@ public class home extends javax.swing.JFrame {
                 jbtn_EntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtn_Entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 90, -1));
+        getContentPane().add(jbtn_Entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 90, -1));
 
         jlbl_recuperar_acesso.setFont(new java.awt.Font("Segoe UI", 2, 10)); // NOI18N
+        jlbl_recuperar_acesso.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_recuperar_acesso.setText("envie email para recuperar acesso");
-        getContentPane().add(jlbl_recuperar_acesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, -1, 20));
+        getContentPane().add(jlbl_recuperar_acesso, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, 20));
 
         jbtn_Enviar.setBackground(new java.awt.Color(135, 79, 255));
         jbtn_Enviar.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,13 +144,15 @@ public class home extends javax.swing.JFrame {
                 jbtn_EnviarActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtn_Enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, -1, 20));
+        getContentPane().add(jbtn_Enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, -1, 20));
 
         jlbl_da_festa.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_da_festa.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_da_festa.setText("da festa");
         getContentPane().add(jlbl_da_festa, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, -1, -1));
 
         jlbl_por_que.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_por_que.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_por_que.setText("Por que ");
         getContentPane().add(jlbl_por_que, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
         jlbl_por_que.getAccessibleContext().setAccessibleName("Por que todo mundo quer estar no centro da festa");
@@ -157,7 +163,7 @@ public class home extends javax.swing.JFrame {
         jlbl_Event.setText("EVENT");
         getContentPane().add(jlbl_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 200, -1));
 
-        jlbl_Branco.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-branco.png")); // NOI18N
+        jlbl_Branco.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-branco.png")); // NOI18N
         getContentPane().add(jlbl_Branco, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 290, -1));
 
         jlbl_Flow.setBackground(new java.awt.Color(135, 79, 255));
@@ -171,13 +177,13 @@ public class home extends javax.swing.JFrame {
         jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
         getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, -1));
 
-        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
+        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
 
-        jlbl_Roxo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
+        jlbl_Roxo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
         getContentPane().add(jlbl_Roxo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 190, 320, -1));
 
-        jpnl_Fundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_Dark_Gray.jpeg")); // NOI18N
+        jpnl_Fundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_Dark_Gray.jpeg")); // NOI18N
         jpnl_Fundo.setFocusable(false);
         jpnl_Fundo.setInheritsPopupMenu(false);
         getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
@@ -187,7 +193,9 @@ public class home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_CadastrarActionPerformed
-        // TODO add your handling code here:
+        cadastro_user cadastroUser = new cadastro_user();
+        cadastroUser.setVisible(true);
+        home.this.dispose();
     }//GEN-LAST:event_jbtn_CadastrarActionPerformed
 
     private void jckb_Lembrar_SenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jckb_Lembrar_SenhaActionPerformed
@@ -203,7 +211,9 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_EntrarActionPerformed
 
     private void jbtn_EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_EnviarActionPerformed
-        // TODO add your handling code here:
+        recuperar_user recuperarUser = new recuperar_user();
+        recuperarUser.setVisible(true);
+        home.this.dispose();
     }//GEN-LAST:event_jbtn_EnviarActionPerformed
 
     /**

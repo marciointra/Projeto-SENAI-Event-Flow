@@ -67,13 +67,20 @@ public class cadastro_user extends javax.swing.JFrame {
         });
         getContentPane().add(jbtn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, -1, -1));
 
+        jlbl_ja_possui_uma_conta.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_ja_possui_uma_conta.setText("Já possui uma conta?");
         getContentPane().add(jlbl_ja_possui_uma_conta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 570, -1, -1));
 
-        jlbl_Salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_salvar.png"))); // NOI18N
+        jlbl_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_salvar.png")); // NOI18N
+        jlbl_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlbl_SalvarMouseClicked(evt);
+            }
+        });
         getContentPane().add(jlbl_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 490, -1, -1));
 
         jckb_Lembrar_Senha.setFont(new java.awt.Font("Arial", 1, 9)); // NOI18N
+        jckb_Lembrar_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jckb_Lembrar_Senha.setText("Lembrar senha");
         jckb_Lembrar_Senha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +98,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jpswdf_Confirmar_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 240, -1));
 
         jlbl_Confirmar_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Confirmar_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Confirmar_Senha.setText("Confirme a senha");
         getContentPane().add(jlbl_Confirmar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
 
@@ -103,6 +111,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 240, -1));
 
         jlbl_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Senha.setText("Informe a senha");
         getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, -1, -1));
 
@@ -119,6 +128,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jtxtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 320, -1));
 
         jlbl_Email.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Email.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Email.setText("Email");
         getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
@@ -135,10 +145,12 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jtxtf_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 320, -1));
 
         jlbl_Nome.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
+        jlbl_Nome.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Nome.setText("Nome");
         getContentPane().add(jlbl_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
         jlbl_por_que.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_por_que.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_por_que.setText("Por que ");
         getContentPane().add(jlbl_por_que, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
@@ -148,6 +160,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, -1));
 
         jlbl_da_festa.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_da_festa.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_da_festa.setText("da festa");
         getContentPane().add(jlbl_da_festa, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
 
@@ -163,11 +176,11 @@ public class cadastro_user extends javax.swing.JFrame {
         jlbl_Flow.setText("FLOW");
         getContentPane().add(jlbl_Flow, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 180, -1));
 
-        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo.png"))); // NOI18N
+        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         jpnl_Fundo.setBackground(java.awt.Color.darkGray);
-        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 620));
+        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -187,6 +200,12 @@ public class cadastro_user extends javax.swing.JFrame {
     private void jbtn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_loginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_loginActionPerformed
+
+    private void jlbl_SalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbl_SalvarMouseClicked
+        home telaHome = new home();
+        telaHome.setVisible(true);
+        cadastro_user.this.dispose();
+    }//GEN-LAST:event_jlbl_SalvarMouseClicked
 
     /**
      * @param args the command line arguments

@@ -79,20 +79,20 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Codigo_Expositor.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Codigo_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Codigo_Expositor.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Codigo_Expositor.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Codigo_Expositor.setText("CÓDIGO EXPOSITOR");
-        jpnl_fundo.add(jlbl_Codigo_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        jpnl_fundo.add(jlbl_Codigo_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, 10));
 
         jtxtf_Expositor.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
         jtxtf_Expositor.setForeground(new java.awt.Color(135, 79, 255));
         jtxtf_Expositor.setText("C-0000");
         jtxtf_Expositor.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(135, 79, 255)));
-        jpnl_fundo.add(jtxtf_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
+        jpnl_fundo.add(jtxtf_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, 10));
 
         jlbl_Nome_Expositor.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Nome_Expositor.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Nome_Expositor.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Expositor.setText("RAZÃO SOCIAL");
         jpnl_fundo.add(jlbl_Nome_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
@@ -102,7 +102,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Responsavel.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Responsavel.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Responsavel.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Responsavel.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Responsavel.setText("RESPONSÁVEL");
         jpnl_fundo.add(jlbl_Responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
 
@@ -112,7 +112,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Contato.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Contato.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Contato.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setText("CONTATO");
         jpnl_fundo.add(jlbl_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
@@ -122,7 +122,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Tipo_Parceria.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Tipo_Parceria.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Tipo_Parceria.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Tipo_Parceria.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Tipo_Parceria.setText("PARCERIA");
         jpnl_fundo.add(jlbl_Tipo_Parceria, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
@@ -141,7 +141,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Dt_Cadastro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Cadastro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Dt_Cadastro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Dt_Cadastro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Cadastro.setText("DATA DE CADASTRO");
         jpnl_fundo.add(jlbl_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
@@ -151,7 +151,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Estatus.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Estatus.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Estatus.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Estatus.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Estatus.setText("ESTATUS");
         jpnl_fundo.add(jlbl_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
 
@@ -170,7 +170,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Descricao.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Descricao.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Descricao.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Descricao.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Descricao.setText("OBSERVAÇÕES");
         jpnl_fundo.add(jlbl_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 80, -1));
 
@@ -186,7 +186,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Logradouro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Logradouro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Logradouro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Logradouro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Logradouro.setText("LOGRADOURO");
         jpnl_fundo.add(jlbl_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
 
@@ -196,7 +196,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Numero.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Numero.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Numero.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Numero.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Numero.setText("NÚMERO");
         jpnl_fundo.add(jlbl_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, -1, -1));
 
@@ -206,7 +206,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Complemento.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Complemento.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Complemento.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Complemento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Complemento.setText("COMPLEMENTO");
         jpnl_fundo.add(jlbl_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, -1, -1));
 
@@ -216,7 +216,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Bairro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Bairro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Bairro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setText("BAIRRO");
         jpnl_fundo.add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
@@ -226,7 +226,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Cidade.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Cidade.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Cidade.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Cidade.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Cidade.setText("CIDADE");
         jpnl_fundo.add(jlbl_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, -1, -1));
 
@@ -236,7 +236,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_UF.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_UF.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_UF.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_UF.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_UF.setText("UF");
         jpnl_fundo.add(jlbl_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, -1, -1));
 
@@ -246,7 +246,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_CEP.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_CEP.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_CEP.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setText("CEP");
         jpnl_fundo.add(jlbl_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
 
@@ -256,15 +256,15 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jlbl_Perfil.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Perfil.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Perfil.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setText("IMAGEM");
-        jpnl_fundo.add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
+        jpnl_fundo.add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
 
-        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagem.png"))); // NOI18N
-        jpnl_fundo.add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\imagem.png")); // NOI18N
+        jpnl_fundo.add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logo.png"))); // NOI18N
-        jpnl_fundo.add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
+        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
+        jpnl_fundo.add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, -1, -1));
 
         jlbl_IMG_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_IMG_Cadastrar.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
@@ -272,7 +272,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Cadastrar.setText("CADASTRAR");
         jpnl_fundo.add(jlbl_IMG_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, 60));
 
-        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retang-roxo.png"))); // NOI18N
+        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
         jpnl_fundo.add(jlbl_IMG_Fundo_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 310, -1));
 
         jlbl_IMG_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -281,15 +281,15 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Evento.setText("EXPOSITOR");
         jpnl_fundo.add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 22, 300, 60));
 
-        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_buscar.png"))); // NOI18N
+        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_buscar.png")); // NOI18N
         jlbl_BTN_Buscar.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, -1, -1));
 
-        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_excluir.png"))); // NOI18N
+        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_excluir.png")); // NOI18N
         jlbl_BTN_Excluir.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_salvar.png"))); // NOI18N
+        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_salvar.png")); // NOI18N
         jlbl_BTN_Salvar.setToolTipText("");
         jlbl_BTN_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -298,7 +298,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         });
         jpnl_fundo.add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
 
-        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/jpnl_Dark_Gray.jpeg"))); // NOI18N
+        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_fundo.png")); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
         jpnl_fundo.add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 

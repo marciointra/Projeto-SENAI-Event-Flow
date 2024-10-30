@@ -79,25 +79,20 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Codigo_Evento.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Codigo_Evento.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Codigo_Evento.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Codigo_Evento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Codigo_Evento.setText("CÓDIGO EVENTO");
-        getContentPane().add(jlbl_Codigo_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        getContentPane().add(jlbl_Codigo_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, -1));
 
         jtxtf_Codigo.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Codigo.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
         jtxtf_Codigo.setForeground(new java.awt.Color(135, 79, 255));
-        jtxtf_Codigo.setText("Renan Lindao");
+        jtxtf_Codigo.setText("C-0000");
         jtxtf_Codigo.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(135, 79, 255)));
-        jtxtf_Codigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtf_CodigoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jtxtf_Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
+        getContentPane().add(jtxtf_Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
 
         jlbl_Nome_Evento.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Evento.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Nome_Evento.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Nome_Evento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Evento.setText("NOME EVENTO");
         getContentPane().add(jlbl_Nome_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
@@ -107,7 +102,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Responsavel.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Responsavel.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Responsavel.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Responsavel.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Responsavel.setText("RESPONSAVEL");
         getContentPane().add(jlbl_Responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
 
@@ -117,7 +112,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Contato.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Contato.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Contato.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setText("CONTATO");
         getContentPane().add(jlbl_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
@@ -127,7 +122,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Publico.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Publico.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Publico.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Publico.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Publico.setText("PUBLICO");
         getContentPane().add(jlbl_Publico, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
@@ -146,7 +141,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Dt_Inicial.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Inicial.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Dt_Inicial.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Dt_Inicial.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Inicial.setText("DATA INICIAL");
         getContentPane().add(jlbl_Dt_Inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
@@ -156,7 +151,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Hr_Inicial.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Hr_Inicial.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Hr_Inicial.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Hr_Inicial.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Hr_Inicial.setText("HORA INICIAL");
         getContentPane().add(jlbl_Hr_Inicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
 
@@ -166,7 +161,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Dt_Termino.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Termino.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Dt_Termino.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Dt_Termino.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Termino.setText("DATA TÉRMINO");
         getContentPane().add(jlbl_Dt_Termino, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
 
@@ -176,7 +171,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Hr_Termino.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Hr_Termino.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Hr_Termino.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Hr_Termino.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Hr_Termino.setText("HORA TÉRMINO");
         getContentPane().add(jlbl_Hr_Termino, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, -1, -1));
 
@@ -186,7 +181,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Descricao.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Descricao.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Descricao.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Descricao.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Descricao.setText("DESCRIÇÃO");
         getContentPane().add(jlbl_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 50, -1));
 
@@ -202,7 +197,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Logradouro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Logradouro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Logradouro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Logradouro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Logradouro.setText("LOGRADOURO");
         getContentPane().add(jlbl_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
@@ -212,7 +207,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Numero.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Numero.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Numero.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Numero.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Numero.setText("NÚMERO");
         getContentPane().add(jlbl_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, -1, -1));
 
@@ -222,7 +217,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Complemento.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Complemento.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Complemento.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Complemento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Complemento.setText("COMPLEMENTO");
         getContentPane().add(jlbl_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 380, -1, -1));
 
@@ -232,7 +227,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Bairro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Bairro.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Bairro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setText("BAIRRO");
         getContentPane().add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, -1, -1));
 
@@ -242,7 +237,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Cidade.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Cidade.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Cidade.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Cidade.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Cidade.setText("CIDADE");
         getContentPane().add(jlbl_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
 
@@ -252,7 +247,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_UF.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_UF.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_UF.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_UF.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_UF.setText("UF");
         getContentPane().add(jlbl_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
 
@@ -262,7 +257,7 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_CEP.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_CEP.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_CEP.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setText("CEP");
         getContentPane().add(jlbl_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, -1, -1));
 
@@ -272,15 +267,15 @@ public class cadastro_evento extends javax.swing.JFrame {
 
         jlbl_Perfil.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Perfil.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_Perfil.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setText("IMAGEM");
-        getContentPane().add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
+        getContentPane().add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
 
-        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagem.png"))); // NOI18N
-        getContentPane().add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\imagem.png")); // NOI18N
+        getContentPane().add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logo.png"))); // NOI18N
-        getContentPane().add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, -1, -1));
+        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\logo.png")); // NOI18N
+        getContentPane().add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, -1, -1));
 
         jlbl_IMG_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_IMG_Cadastrar.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
@@ -288,7 +283,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_IMG_Cadastrar.setText("CADASTRAR");
         getContentPane().add(jlbl_IMG_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, 60));
 
-        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/retang-roxo.png"))); // NOI18N
+        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\retang-roxo.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Fundo_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 310, -1));
 
         jlbl_IMG_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -297,7 +292,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_IMG_Evento.setText("EVENTO");
         getContentPane().add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 22, 180, 60));
 
-        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_salvar.png"))); // NOI18N
+        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_salvar.png")); // NOI18N
         jlbl_BTN_Salvar.setToolTipText("");
         jlbl_BTN_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -306,15 +301,15 @@ public class cadastro_evento extends javax.swing.JFrame {
         });
         getContentPane().add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
 
-        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_excluir.png"))); // NOI18N
+        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_excluir.png")); // NOI18N
         jlbl_BTN_Excluir.setToolTipText("");
         getContentPane().add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/btn_buscar.png"))); // NOI18N
+        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_buscar.png")); // NOI18N
         jlbl_BTN_Buscar.setToolTipText("");
         getContentPane().add(jlbl_BTN_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, -1, -1));
 
-        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/jpnl_Dark_Gray.jpeg"))); // NOI18N
+        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\jpnl_fundo.png")); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
         getContentPane().add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, -1));
 
@@ -330,10 +325,6 @@ public class cadastro_evento extends javax.swing.JFrame {
         salvar.setVisible(true);
         cadastro_evento.this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jlbl_BTN_SalvarMouseClicked
-
-    private void jtxtf_CodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtf_CodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtf_CodigoActionPerformed
 
     /**
      * @param args the command line arguments
