@@ -4,6 +4,15 @@
  */
 package Frames;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author m.intra
@@ -66,10 +75,9 @@ public class home extends javax.swing.JFrame {
         jLabel10.setText("Por que todo mundo quer estar no centro da festa");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(113, 100, 100));
         setMinimumSize(new java.awt.Dimension(920, 612));
         setName("frame_home"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(920, 612));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbtn_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
@@ -103,7 +111,7 @@ public class home extends javax.swing.JFrame {
 
         jpswdf_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Password.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
-        jpswdf_Password.setText("jPasswordField1");
+        jpswdf_Password.setText("  ");
         getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 180, -1));
 
         jckb_Lembrar_Senha.setFont(new java.awt.Font("Arial", 1, 9)); // NOI18N
@@ -162,8 +170,6 @@ public class home extends javax.swing.JFrame {
         jlbl_Event.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Event.setText("EVENT");
         getContentPane().add(jlbl_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 200, -1));
-
-        jlbl_Branco.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-branco.png")); // NOI18N
         getContentPane().add(jlbl_Branco, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 290, -1));
 
         jlbl_Flow.setBackground(new java.awt.Color(135, 79, 255));
@@ -176,18 +182,12 @@ public class home extends javax.swing.JFrame {
         jlbl_todo_mundo_quer_estar_no_centro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
         getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, -1));
-
-        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
-
-        jlbl_Roxo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
         getContentPane().add(jlbl_Roxo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 190, 320, -1));
 
-        jpnl_Fundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_Dark_Gray.jpeg")); // NOI18N
         jpnl_Fundo.setFocusable(false);
         jpnl_Fundo.setInheritsPopupMenu(false);
         getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
-        jpnl_Fundo.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -207,7 +207,35 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_jtxtf_EmailActionPerformed
 
     private void jbtn_EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_EntrarActionPerformed
-        // TODO add your handling code here:
+
+        try {
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://127.0.0.1:3306/EventFlow";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "SELECT Nome_Usuario FROM Usuario WHERE Email_Usuario = ? AND Senha = ?";
+            
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, jtxtf_Email.getText());  //Email_Usuario
+            statement.setString(2, jpswdf_Password.getText()); //Senha
+            
+            ResultSet resultSet = statement.executeQuery();
+            if(resultSet.next()){
+                  Dashboard dashboard = new Dashboard();
+                  dashboard.setVisible(true);
+                  this.dispose(); 
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Usuario não encontrado.");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_jbtn_EntrarActionPerformed
 
     private void jbtn_EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_EnviarActionPerformed
