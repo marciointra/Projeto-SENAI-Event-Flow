@@ -39,7 +39,7 @@ public class recuperar_user extends javax.swing.JFrame {
         jlbl_Event = new javax.swing.JLabel();
         jlbl_Flow = new javax.swing.JLabel();
         jlbl_Logo_EF = new javax.swing.JLabel();
-        jpnl_Fundo = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 0, 153));
@@ -50,7 +50,6 @@ public class recuperar_user extends javax.swing.JFrame {
         setName("recuperar_user"); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jlbl_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_salvar.png")); // NOI18N
         jlbl_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jlbl_SalvarMouseClicked(evt);
@@ -127,12 +126,16 @@ public class recuperar_user extends javax.swing.JFrame {
         jlbl_Flow.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Flow.setText("FLOW");
         getContentPane().add(jlbl_Flow, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 180, -1));
-
-        jlbl_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
-        jpnl_Fundo.setBackground(java.awt.Color.darkGray);
-        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 620));
+        jButton1.setBackground(new java.awt.Color(140, 22, 223));
+        jButton1.setText("Confirmar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,6 +149,12 @@ public class recuperar_user extends javax.swing.JFrame {
         telaHomer.setVisible(true);
         recuperar_user.this.dispose();
     }//GEN-LAST:event_jlbl_SalvarMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        home h = new home();
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +199,7 @@ public class recuperar_user extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jlbl_Codigo_Confirmacao;
     private javax.swing.JLabel jlbl_Confirmar_Senha;
     private javax.swing.JLabel jlbl_Event;
@@ -200,7 +210,6 @@ public class recuperar_user extends javax.swing.JFrame {
     private javax.swing.JLabel jlbl_da_festa;
     private javax.swing.JLabel jlbl_por_que;
     private javax.swing.JLabel jlbl_todo_mundo_quer_estar_no_centro;
-    private javax.swing.JPanel jpnl_Fundo;
     private javax.swing.JPasswordField jpswdf_Confirmar_Password;
     private javax.swing.JPasswordField jpswdf_Novo_Password;
     private javax.swing.JTextField jtxtf_Codigo_Confirmacao;

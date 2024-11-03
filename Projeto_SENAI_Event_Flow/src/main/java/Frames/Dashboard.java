@@ -26,26 +26,135 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jlbl_por_que = new javax.swing.JLabel();
+        jlbl_todo_mundo_quer_estar_no_centro = new javax.swing.JLabel();
+        jlbl_da_festa = new javax.swing.JLabel();
+        JbutPesquisar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        Fundo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        Jlbl_fundoDashboard = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(135, 79, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jlbl_por_que.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_por_que.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_por_que.setText("Por que ");
+        getContentPane().add(jlbl_por_que, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+
+        jlbl_todo_mundo_quer_estar_no_centro.setFont(new java.awt.Font("Arial", 2, 16)); // NOI18N
+        jlbl_todo_mundo_quer_estar_no_centro.setForeground(new java.awt.Color(135, 79, 255));
+        jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
+        getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, -1, -1));
+
+        jlbl_da_festa.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jlbl_da_festa.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_da_festa.setText("da festa");
+        getContentPane().add(jlbl_da_festa, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, -1, -1));
+
+        JbutPesquisar.setBackground(new java.awt.Color(129, 25, 184));
+        JbutPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
+        JbutPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbutPesquisarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JbutPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 40, 40));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(150, 33, 255));
+        jLabel1.setText("Flow");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 170, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 3, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Event");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 170, -1));
+
         jButton1.setBackground(new java.awt.Color(129, 25, 184));
-        jButton1.setText("Eventos");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 110, 100));
+        jButton1.setText("Usuario");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 140, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 170, -1));
+        jButton2.setBackground(new java.awt.Color(129, 25, 184));
+        jButton2.setText("Eventos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 100, 60));
 
-        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
-        getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, -1));
+        jButton3.setBackground(new java.awt.Color(129, 25, 184));
+        jButton3.setText("Fornecedores");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 110, 60));
+
+        jButton4.setBackground(new java.awt.Color(129, 25, 184));
+        jButton4.setText("Participantes");
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 110, 60));
+
+        jButton5.setBackground(new java.awt.Color(129, 25, 184));
+        jButton5.setText("Expositor");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 100, 60));
+
+        jButton6.setBackground(new java.awt.Color(129, 25, 184));
+        jButton6.setText("Modelo");
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 100, 60));
+
+        jButton7.setBackground(new java.awt.Color(129, 25, 184));
+        jButton7.setText("Checklist");
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 200, 60));
+
+        Jlbl_fundoDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Event (4).png"))); // NOI18N
+        getContentPane().add(Jlbl_fundoDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -150, 1690, 1000));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        cadastro_evento cadastroEvento = new cadastro_evento();
+        cadastroEvento.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        cadastro_fornecedor cf = new cadastro_fornecedor();
+        cf.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        cadastro_expositor ce = new cadastro_expositor();
+        ce.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void JbutPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbutPesquisarActionPerformed
+        // TODO add your handling code here:
+        Tela_Pesquisa_Eventos tpe = new Tela_Pesquisa_Eventos();
+        tpe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_JbutPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,8 +192,19 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Fundo;
+    private javax.swing.JButton JbutPesquisar;
+    private javax.swing.JLabel Jlbl_fundoDashboard;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jlbl_da_festa;
+    private javax.swing.JLabel jlbl_por_que;
+    private javax.swing.JLabel jlbl_todo_mundo_quer_estar_no_centro;
     // End of variables declaration//GEN-END:variables
 }

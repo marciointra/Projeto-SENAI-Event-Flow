@@ -113,7 +113,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="4f" red="87" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="RAZ&#xc3;O SOCIAL"/>
+            <Property name="text" type="java.lang.String" value="NOME"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -722,11 +722,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="jlbl_IMG_Perfil">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\imagem.png"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="80" y="220" width="-1" height="-1"/>
@@ -734,11 +729,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="jlbl_IMG_Logo_EF">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\logo.png"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="510" width="-1" height="-1"/>
@@ -765,11 +755,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="jlbl_IMG_Fundo_Cadastrar">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\retang-roxo.png"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="40" y="30" width="310" height="-1"/>
@@ -797,9 +782,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jlbl_BTN_Buscar">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\btn_buscar.png"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>
@@ -810,9 +792,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jlbl_BTN_Excluir">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\btn_excluir.png"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>
@@ -821,11 +800,30 @@
             </Constraint>
           </Constraints>
         </Component>
+        <Component class="javax.swing.JButton" name="Jbut_Confirmar">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="3"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="4f" red="87" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Confirmar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Jbut_ConfirmarActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="290" y="460" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
         <Component class="javax.swing.JLabel" name="jlbl_BTN_Salvar">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\btn_salvar.png"/>
-            </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
@@ -840,7 +838,7 @@
         <Component class="javax.swing.JLabel" name="jlbl_FUNDO">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\m.intra\Documents\NetBeansProjects\Projeto_SENAI_Event_Flow\src\main\java\Imagens\jpnl_fundo.png"/>
+              <Image iconType="3" name="/jpnl_fundo.png"/>
             </Property>
             <Property name="name" type="java.lang.String" value="cadastro_evento" noResource="true"/>
           </Properties>

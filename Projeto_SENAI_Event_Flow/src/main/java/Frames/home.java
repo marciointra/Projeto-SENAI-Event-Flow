@@ -181,13 +181,14 @@ public class home extends javax.swing.JFrame {
         jlbl_todo_mundo_quer_estar_no_centro.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jlbl_todo_mundo_quer_estar_no_centro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
-        getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, -1));
+        getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, -1, -1));
         getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
         getContentPane().add(jlbl_Roxo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 190, 320, -1));
 
+        jpnl_Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_Dark_Gray.jpeg"))); // NOI18N
         jpnl_Fundo.setFocusable(false);
         jpnl_Fundo.setInheritsPopupMenu(false);
-        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
+        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 920, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -235,7 +236,6 @@ public class home extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }//GEN-LAST:event_jbtn_EntrarActionPerformed
 
     private void jbtn_EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_EnviarActionPerformed

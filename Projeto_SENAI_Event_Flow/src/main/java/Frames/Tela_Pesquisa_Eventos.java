@@ -65,8 +65,6 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Jtxt_Pesquisar_Tela_Pesquisa_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 550, 40));
-
-        Jlbl_IconeLupa_Tela_Pesquisa_Eventos.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\icone_lupa1.png")); // NOI18N
         getContentPane().add(Jlbl_IconeLupa_Tela_Pesquisa_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 30, 40));
 
         Jbtn_codigo_Tela_Pesquisa_Eventos.setBackground(new java.awt.Color(135, 79, 255));
@@ -121,6 +119,8 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
 
         getContentPane().add(jPanel_Status_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 120, 30));
 
+        Tabela_Eventos.setBackground(new java.awt.Color(153, 0, 255));
+        Tabela_Eventos.setForeground(new java.awt.Color(102, 0, 255));
         Tabela_Eventos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -139,7 +139,7 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
         Jlbl_Status.setToolTipText("");
         getContentPane().add(Jlbl_Status, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 250, -1));
 
-        Jlbl_Background_Tela_Pesquisa_Eventos.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.schmidt\\Desktop\\Event Flow\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_fundo.png")); // NOI18N
+        Jlbl_Background_Tela_Pesquisa_Eventos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
         getContentPane().add(Jlbl_Background_Tela_Pesquisa_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 920, 640));
 
         pack();

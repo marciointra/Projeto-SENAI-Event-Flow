@@ -11,6 +11,6 @@ package com.mycompany.projeto_senai_event_flow;
 public class Projeto_SENAI_Event_Flow {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }

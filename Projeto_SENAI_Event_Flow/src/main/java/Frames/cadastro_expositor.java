@@ -4,6 +4,14 @@
  */
 package Frames;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author marci
@@ -66,6 +74,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Evento = new javax.swing.JLabel();
         jlbl_BTN_Buscar = new javax.swing.JLabel();
         jlbl_BTN_Excluir = new javax.swing.JLabel();
+        Jbut_Confirmar = new javax.swing.JButton();
         jlbl_BTN_Salvar = new javax.swing.JLabel();
         jlbl_FUNDO = new javax.swing.JLabel();
 
@@ -93,7 +102,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Nome_Expositor.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Nome_Expositor.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Nome_Expositor.setText("RAZÃO SOCIAL");
+        jlbl_Nome_Expositor.setText("NOME");
         jpnl_fundo.add(jlbl_Nome_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
         jtxtf_Nome_Expositor.setBackground(new java.awt.Color(255, 255, 255));
@@ -259,11 +268,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Perfil.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setText("IMAGEM");
         jpnl_fundo.add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
-
-        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\imagem.png")); // NOI18N
         jpnl_fundo.add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
-
-        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\logo.png")); // NOI18N
         jpnl_fundo.add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, -1, -1));
 
         jlbl_IMG_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
@@ -271,8 +276,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_IMG_Cadastrar.setText("CADASTRAR");
         jpnl_fundo.add(jlbl_IMG_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, 60));
-
-        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\retang-roxo.png")); // NOI18N
         jpnl_fundo.add(jlbl_IMG_Fundo_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 310, -1));
 
         jlbl_IMG_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -281,15 +284,23 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Evento.setText("EXPOSITOR");
         jpnl_fundo.add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 22, 300, 60));
 
-        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_buscar.png")); // NOI18N
         jlbl_BTN_Buscar.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, -1, -1));
 
-        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_excluir.png")); // NOI18N
         jlbl_BTN_Excluir.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\btn_salvar.png")); // NOI18N
+        Jbut_Confirmar.setBackground(new java.awt.Color(255, 255, 255));
+        Jbut_Confirmar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        Jbut_Confirmar.setForeground(new java.awt.Color(135, 79, 255));
+        Jbut_Confirmar.setText("Confirmar");
+        Jbut_Confirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jbut_ConfirmarActionPerformed(evt);
+            }
+        });
+        jpnl_fundo.add(Jbut_Confirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, -1, -1));
+
         jlbl_BTN_Salvar.setToolTipText("");
         jlbl_BTN_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -298,7 +309,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         });
         jpnl_fundo.add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
 
-        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\src\\main\\java\\Imagens\\jpnl_fundo.png")); // NOI18N
+        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
         jpnl_fundo.add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -333,6 +344,39 @@ public class cadastro_expositor extends javax.swing.JFrame {
     private void jcbx_EstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbx_EstatusActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbx_EstatusActionPerformed
+
+    private void Jbut_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbut_ConfirmarActionPerformed
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://127.0.0.1:3306/EventFlow"; // se der errado, substitua localhost por: 127.0.0.1:3306
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "INSERT INTO Expositor(Nome_Expositor , Responsavel, Email_Expositor, Data_Cadastro, CEP) VALUES(?, ?, ?, ?, ?)";
+            statement = conexao.prepareStatement(sql);
+            
+            statement.setString(1, jtxtf_Nome_Expositor.getText()); //nome
+            statement.setString(2, jtxtf_Responsavel.getText()); //responsável
+            statement.setString(3, jtxtf_Contato.getText()); //e-mail
+            statement.setInt(4, Integer.parseInt(jtxtf_Dt_Cadastro.getText())); // data
+            statement.setInt(5, Integer.parseInt(jtxtf_CEP.getText()));
+            
+            System.out.println("Deu certo");
+            statement.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "Expositor cadastrado com sucesso!");
+            cadastro_expositor.this.dispose();
+            
+            Dashboard ds = new Dashboard();
+            ds.setVisible(true);             
+        } catch (SQLException ex) {
+            Logger.getLogger(cadastro_expositor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Jbut_ConfirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -373,6 +417,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Jbut_Confirmar;
     private javax.swing.JComboBox<String> jcbx_Estatus;
     private javax.swing.JComboBox<String> jcbx_parceria;
     private javax.swing.JLabel jlbl_BTN_Buscar;

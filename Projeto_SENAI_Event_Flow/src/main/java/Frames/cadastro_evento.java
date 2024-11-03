@@ -4,12 +4,19 @@
  */
 package Frames;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author marci
  */
 public class cadastro_evento extends javax.swing.JFrame {
-
     /**
      * Creates new form add_evento
      */
@@ -70,6 +77,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_BTN_Salvar = new javax.swing.JLabel();
         jlbl_BTN_Excluir = new javax.swing.JLabel();
         jlbl_BTN_Buscar = new javax.swing.JLabel();
+        Jbut_confirmar = new java.awt.Button();
         jlbl_FUNDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -93,7 +101,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_Nome_Evento.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Evento.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Nome_Evento.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Nome_Evento.setText("NOME EVENTO");
+        jlbl_Nome_Evento.setText("TITULO EVENTO");
         getContentPane().add(jlbl_Nome_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
         jtxtf_Nome_Evento.setBackground(new java.awt.Color(255, 255, 255));
@@ -228,7 +236,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_Bairro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Bairro.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Bairro.setText("BAIRRO");
+        jlbl_Bairro.setText("LOCALIZAÇÃO");
         getContentPane().add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, -1, -1));
 
         jtxtf_Bairro.setBackground(new java.awt.Color(255, 255, 255));
@@ -270,11 +278,7 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_Perfil.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setText("IMAGEM");
         getContentPane().add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
-
-        jlbl_IMG_Perfil.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\imagem.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
-
-        jlbl_IMG_Logo_EF.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\logo.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, -1, -1));
 
         jlbl_IMG_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
@@ -282,8 +286,6 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_IMG_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_IMG_Cadastrar.setText("CADASTRAR");
         getContentPane().add(jlbl_IMG_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, 60));
-
-        jlbl_IMG_Fundo_Cadastrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\retang-roxo.png")); // NOI18N
         getContentPane().add(jlbl_IMG_Fundo_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 310, -1));
 
         jlbl_IMG_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -292,7 +294,6 @@ public class cadastro_evento extends javax.swing.JFrame {
         jlbl_IMG_Evento.setText("EVENTO");
         getContentPane().add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 22, 180, 60));
 
-        jlbl_BTN_Salvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_salvar.png")); // NOI18N
         jlbl_BTN_Salvar.setToolTipText("");
         jlbl_BTN_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -301,15 +302,24 @@ public class cadastro_evento extends javax.swing.JFrame {
         });
         getContentPane().add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
 
-        jlbl_BTN_Excluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_excluir.png")); // NOI18N
         jlbl_BTN_Excluir.setToolTipText("");
         getContentPane().add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        jlbl_BTN_Buscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\btn_buscar.png")); // NOI18N
         jlbl_BTN_Buscar.setToolTipText("");
         getContentPane().add(jlbl_BTN_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, -1, -1));
 
-        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon("C:\\Users\\m.intra\\Documents\\NetBeansProjects\\Projeto_SENAI_Event_Flow\\Projeto_SENAI_Event_Flow\\src\\main\\resources\\jpnl_fundo.png")); // NOI18N
+        Jbut_confirmar.setBackground(new java.awt.Color(255, 255, 255));
+        Jbut_confirmar.setFont(new java.awt.Font("Ebrima", 3, 18)); // NOI18N
+        Jbut_confirmar.setForeground(new java.awt.Color(135, 79, 255));
+        Jbut_confirmar.setLabel("Confirmar");
+        Jbut_confirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jbut_confirmarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Jbut_confirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
+
+        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
         getContentPane().add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, -1));
 
@@ -326,6 +336,44 @@ public class cadastro_evento extends javax.swing.JFrame {
         cadastro_evento.this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jlbl_BTN_SalvarMouseClicked
 
+    private void Jbut_confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbut_confirmarActionPerformed
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement statement= null;
+            
+            String url = "jdbc:mysql://127.0.0.1:3306/EventFlow";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "INSERT INTO Evento(TituloEvento, Responsavel_Evento, Contato_Evento, DataEvento_inicial, DataEvento_Final, LocalEvento, HorarioEvento_inicial, HorarioEvento_Final, DescricaoEvento) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1,jtxtf_Nome_Evento.getText());
+            statement.setString(2, jtxtf_Responsavel.getText());
+            statement.setInt(3, Integer.parseInt(jtxtf_Contato.getText()));
+            statement.setInt(4, Integer.parseInt(jtxtf_Dt_Inicial.getText()));
+            statement.setInt(5, Integer.parseInt(jtxtf_Dt_Termino.getText()));
+            statement.setString(6, jtxtf_Bairro.getText());
+            statement.setInt(7, Integer.parseInt(jtxtf_Hr_Inicial.getText()));
+            statement.setInt(8, Integer.parseInt(jtxtf_Hr_Termino.getText()));
+            statement.setString(9, jtxta_Descricao.getText());
+            
+            System.out.println("Deu certo");
+            JOptionPane.showMessageDialog(null, "Evento Cadastrado com sucesso!");
+            statement.executeUpdate();
+            
+            cadastro_evento.this.dispose();
+            
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(cadastro_evento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_Jbut_confirmarActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -365,6 +413,7 @@ public class cadastro_evento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button Jbut_confirmar;
     private javax.swing.JComboBox<String> jcbx_Publico;
     private javax.swing.JLabel jlbl_BTN_Buscar;
     private javax.swing.JLabel jlbl_BTN_Excluir;

@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,6 +34,7 @@ public class cadastro_user extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jbtn_login = new javax.swing.JButton();
         jlbl_ja_possui_uma_conta = new javax.swing.JLabel();
         jlbl_Salvar = new javax.swing.JLabel();
@@ -51,16 +53,19 @@ public class cadastro_user extends javax.swing.JFrame {
         jlbl_Event = new javax.swing.JLabel();
         jlbl_Flow = new javax.swing.JLabel();
         jlbl_Logo_EF = new javax.swing.JLabel();
-        jpnl_Fundo = new javax.swing.JPanel();
         Confirmar = new javax.swing.JButton();
+        jlblFundo = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(253, 253, 253));
+        setBackground(new java.awt.Color(51, 51, 51));
         setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         setForeground(new java.awt.Color(102, 0, 153));
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(460, 640));
         setName("cadastrar_user"); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbtn_login.setBackground(new java.awt.Color(135, 79, 255));
         jbtn_login.setForeground(new java.awt.Color(255, 255, 255));
@@ -71,15 +76,18 @@ public class cadastro_user extends javax.swing.JFrame {
                 jbtn_loginActionPerformed(evt);
             }
         });
+        getContentPane().add(jbtn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 591, -1, -1));
 
         jlbl_ja_possui_uma_conta.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_ja_possui_uma_conta.setText("Já possui uma conta?");
+        getContentPane().add(jlbl_ja_possui_uma_conta, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 593, -1, -1));
 
         jlbl_Salvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jlbl_SalvarMouseClicked(evt);
             }
         });
+        getContentPane().add(jlbl_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 523, -1, -1));
 
         jckb_Lembrar_Senha.setFont(new java.awt.Font("Arial", 1, 9)); // NOI18N
         jckb_Lembrar_Senha.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,6 +97,7 @@ public class cadastro_user extends javax.swing.JFrame {
                 jckb_Lembrar_SenhaActionPerformed(evt);
             }
         });
+        getContentPane().add(jckb_Lembrar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 464, -1, -1));
 
         jpswdf_Confirmar_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Confirmar_Password.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
@@ -96,10 +105,12 @@ public class cadastro_user extends javax.swing.JFrame {
         jpswdf_Confirmar_Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpswdf_Confirmar_Password.setMinimumSize(new java.awt.Dimension(65, 25));
         jpswdf_Confirmar_Password.setPreferredSize(new java.awt.Dimension(65, 25));
+        getContentPane().add(jpswdf_Confirmar_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 426, 240, -1));
 
         jlbl_Confirmar_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
         jlbl_Confirmar_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Confirmar_Senha.setText("Confirme a senha");
+        getContentPane().add(jlbl_Confirmar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 406, -1, -1));
 
         jpswdf_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Password.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
@@ -107,10 +118,12 @@ public class cadastro_user extends javax.swing.JFrame {
         jpswdf_Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpswdf_Password.setMinimumSize(new java.awt.Dimension(65, 25));
         jpswdf_Password.setPreferredSize(new java.awt.Dimension(65, 25));
+        getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 376, 240, -1));
 
         jlbl_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
         jlbl_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Senha.setText("Informe a senha");
+        getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 356, -1, -1));
 
         jtxtf_Email.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Email.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
@@ -122,10 +135,12 @@ public class cadastro_user extends javax.swing.JFrame {
                 jtxtf_EmailActionPerformed(evt);
             }
         });
+        getContentPane().add(jtxtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 320, -1));
 
         jlbl_Email.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
         jlbl_Email.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Email.setText("Email");
+        getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
         jtxtf_Nome.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Nome.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
@@ -137,35 +152,40 @@ public class cadastro_user extends javax.swing.JFrame {
                 jtxtf_NomeActionPerformed(evt);
             }
         });
+        getContentPane().add(jtxtf_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 320, -1));
 
         jlbl_Nome.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
         jlbl_Nome.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Nome.setText("Nome");
+        getContentPane().add(jlbl_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 248, -1, -1));
 
         jlbl_por_que.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jlbl_por_que.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_por_que.setText("Por que ");
+        getContentPane().add(jlbl_por_que, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         jlbl_todo_mundo_quer_estar_no_centro.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jlbl_todo_mundo_quer_estar_no_centro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
+        getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
         jlbl_da_festa.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jlbl_da_festa.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_da_festa.setText("da festa");
+        getContentPane().add(jlbl_da_festa, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, -1, -1));
 
         jlbl_Event.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_Event.setFont(new java.awt.Font("Arial Black", 3, 48)); // NOI18N
         jlbl_Event.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Event.setText("EVENT");
+        getContentPane().add(jlbl_Event, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 118, 200, -1));
 
         jlbl_Flow.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Flow.setFont(new java.awt.Font("Arial Black", 3, 48)); // NOI18N
         jlbl_Flow.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Flow.setText("FLOW");
-
-        jpnl_Fundo.setBackground(java.awt.Color.darkGray);
-        jpnl_Fundo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jlbl_Flow, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 118, 180, -1));
+        getContentPane().add(jlbl_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 20, -1, -1));
 
         Confirmar.setText("Confirmar");
         Confirmar.addActionListener(new java.awt.event.ActionListener() {
@@ -173,128 +193,11 @@ public class cadastro_user extends javax.swing.JFrame {
                 ConfirmarActionPerformed(evt);
             }
         });
+        getContentPane().add(Confirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 536, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(jlbl_Flow, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jtxtf_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jlbl_Email))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jtxtf_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(jlbl_Salvar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jlbl_Nome))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jpswdf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jlbl_Event, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jlbl_Senha))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jbtn_login))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jlbl_Confirmar_Senha))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jlbl_Logo_EF))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jlbl_ja_possui_uma_conta))
-                    .addComponent(jpnl_Fundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jlbl_por_que)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jlbl_todo_mundo_quer_estar_no_centro)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jlbl_da_festa))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(Confirmar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jckb_Lembrar_Senha)
-                            .addComponent(jpswdf_Confirmar_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(40, 40, 40))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jlbl_Nome))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jlbl_da_festa))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(570, 570, 570)
-                        .addComponent(jbtn_login))
-                    .addComponent(jpnl_Fundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(jlbl_Logo_EF))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addComponent(jlbl_Flow)
-                                .addGap(82, 82, 82)
-                                .addComponent(jtxtf_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(5, 5, 5)
-                                .addComponent(jlbl_Email)
-                                .addGap(4, 4, 4)
-                                .addComponent(jtxtf_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(370, 370, 370)
-                                .addComponent(jpswdf_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(190, 190, 190)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jlbl_por_que)
-                                    .addComponent(jlbl_todo_mundo_quer_estar_no_centro)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(420, 420, 420)
-                                .addComponent(jpswdf_Confirmar_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addComponent(jlbl_Event))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(350, 350, 350)
-                                .addComponent(jlbl_Senha))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(400, 400, 400)
-                                .addComponent(jlbl_Confirmar_Senha)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jckb_Lembrar_Senha)
-                        .addGap(18, 18, 18)
-                        .addComponent(jlbl_Salvar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Confirmar)
-                        .addGap(30, 30, 30)
-                        .addComponent(jlbl_ja_possui_uma_conta)))
-                .addGap(30, 30, 30))
-        );
+        jlblFundo.setForeground(new java.awt.Color(51, 51, 51));
+        jlblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_Dark_Gray.jpeg"))); // NOI18N
+        getContentPane().add(jlblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 450, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -345,6 +248,13 @@ public class cadastro_user extends javax.swing.JFrame {
             System.out.println("Deu certo");
             statement.executeUpdate();
             
+            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso!");
+            
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+            
+            this.dispose();
+            
         } catch (SQLException ex) {
             Logger.getLogger(cadastro_user.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -391,8 +301,10 @@ public class cadastro_user extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Confirmar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton jbtn_login;
     private javax.swing.JCheckBox jckb_Lembrar_Senha;
+    private javax.swing.JLabel jlblFundo;
     private javax.swing.JLabel jlbl_Confirmar_Senha;
     private javax.swing.JLabel jlbl_Email;
     private javax.swing.JLabel jlbl_Event;
@@ -405,7 +317,6 @@ public class cadastro_user extends javax.swing.JFrame {
     private javax.swing.JLabel jlbl_ja_possui_uma_conta;
     private javax.swing.JLabel jlbl_por_que;
     private javax.swing.JLabel jlbl_todo_mundo_quer_estar_no_centro;
-    private javax.swing.JPanel jpnl_Fundo;
     private javax.swing.JPasswordField jpswdf_Confirmar_Password;
     private javax.swing.JPasswordField jpswdf_Password;
     private javax.swing.JTextField jtxtf_Email;
