@@ -80,7 +80,6 @@ public class home extends javax.swing.JFrame {
         setName("frame_home"); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jbtn_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
         jbtn_Cadastrar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jbtn_Cadastrar.setForeground(new java.awt.Color(135, 79, 255));
         jbtn_Cadastrar.setLabel("cadastrar");
@@ -96,7 +95,6 @@ public class home extends javax.swing.JFrame {
         jlbl_Email.setText("Email");
         getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, -1, -1));
 
-        jtxtf_Email.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtf_EmailActionPerformed(evt);
@@ -109,7 +107,6 @@ public class home extends javax.swing.JFrame {
         jlbl_Senha.setText("Senha");
         getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
-        jpswdf_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Password.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
         jpswdf_Password.setText("  ");
         getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 180, -1));
@@ -188,7 +185,7 @@ public class home extends javax.swing.JFrame {
         jpnl_Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_Dark_Gray.jpeg"))); // NOI18N
         jpnl_Fundo.setFocusable(false);
         jpnl_Fundo.setInheritsPopupMenu(false);
-        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 920, -1));
+        getContentPane().add(jpnl_Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 920, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

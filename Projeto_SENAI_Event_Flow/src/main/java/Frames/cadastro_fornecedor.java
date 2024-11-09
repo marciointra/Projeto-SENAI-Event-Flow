@@ -76,8 +76,9 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_BTN_Salvar = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         imgaqui = new javax.swing.JLabel();
-        jlbl_FUNDO = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jlbl_FUNDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(920, 612));
@@ -93,7 +94,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Codigo_Fornecedor.setText("CÓDIGO FORNECEDOR");
         jpnl_fundo.add(jlbl_Codigo_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, -1, -1));
 
-        jtxtf_Fornecedor.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Fornecedor.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
         jtxtf_Fornecedor.setForeground(new java.awt.Color(135, 79, 255));
         jtxtf_Fornecedor.setText("Renan lindao dds19");
@@ -106,7 +106,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Nome_Fornecedor.setText("Nome");
         jpnl_fundo.add(jlbl_Nome_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, -1, -1));
 
-        jtxtf_Nome_Fornecedor.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Nome_Fornecedor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Nome_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 290, 25));
 
@@ -116,7 +115,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Contato.setText("CONTATO");
         jpnl_fundo.add(jlbl_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
 
-        jtxtf_Contato.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Contato.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 140, 25));
 
@@ -126,7 +124,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Tipo_Servico.setText("SERVIÇO PRESTADO");
         jpnl_fundo.add(jlbl_Tipo_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, -1, -1));
 
-        jcbx_Tipo_Servico.setBackground(new java.awt.Color(255, 255, 255));
         jcbx_Tipo_Servico.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jcbx_Tipo_Servico.setForeground(new java.awt.Color(135, 79, 255));
         jcbx_Tipo_Servico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PRODUTOS DESCARTAVEIS", "BEBIDAS", "COMIDAS", "SALGADOS", "SONORIZAÇÃO", "MULTIMIDEA", "ARRANJO", "DECORAÇÃO", "FLORICULTURA", "MESAS & CADEIRAS" }));
@@ -145,7 +142,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Dt_Cadastro.setText("DATA DE CADASTRO");
         jpnl_fundo.add(jlbl_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
 
-        jtxtf_Dt_Cadastro.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Dt_Cadastro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 140, 25));
 
@@ -155,7 +151,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Estatus.setText("ESTATUS");
         jpnl_fundo.add(jlbl_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, -1, -1));
 
-        jcbx_Estatus.setBackground(new java.awt.Color(255, 255, 255));
         jcbx_Estatus.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jcbx_Estatus.setForeground(new java.awt.Color(135, 79, 255));
         jcbx_Estatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ATIVO", "INATIVO", "PENDENTE" }));
@@ -174,7 +169,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Descricao.setText("OBSERVAÇÕES");
         jpnl_fundo.add(jlbl_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 80, -1));
 
-        jtxta_Descricao.setBackground(new java.awt.Color(255, 255, 255));
         jtxta_Descricao.setColumns(20);
         jtxta_Descricao.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jtxta_Descricao.setForeground(new java.awt.Color(135, 79, 255));
@@ -190,7 +184,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Logradouro.setText("LOGRADOURO");
         jpnl_fundo.add(jlbl_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, -1));
 
-        jtxtf_Logradouro.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Logradouro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 270, 25));
 
@@ -200,7 +193,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Numero.setText("NÚMERO");
         jpnl_fundo.add(jlbl_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
 
-        jtxtf_Numero.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Numero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 70, 25));
 
@@ -210,7 +202,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Complemento.setText("COMPLEMENTO");
         jpnl_fundo.add(jlbl_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, -1, -1));
 
-        jtxtf_Complemento.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Complemento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 239, 25));
 
@@ -220,7 +211,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Bairro.setText("BAIRRO");
         jpnl_fundo.add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
 
-        jtxtf_Bairro.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Bairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 210, 25));
 
@@ -230,7 +220,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Cidade.setText("CIDADE");
         jpnl_fundo.add(jlbl_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, -1));
 
-        jtxtf_Cidade.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Cidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 190, 25));
 
@@ -240,7 +229,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_UF.setText("UF");
         jpnl_fundo.add(jlbl_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, -1, -1));
 
-        jtxtf_UF.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_UF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 40, 25));
 
@@ -250,7 +238,6 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_CEP.setText("CEP");
         jpnl_fundo.add(jlbl_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 370, -1, -1));
 
-        jtxtf_CEP.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_CEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 390, 130, 25));
 
@@ -310,9 +297,13 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jpnl_fundo.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, -1, -1));
         jpnl_fundo.add(imgaqui, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, -1, -1));
 
-        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
-        jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
-        jpnl_fundo.add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -326,6 +317,10 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         );
 
         jpnl_fundo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 0, -1, -1));
+
+        jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
+        jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
+        jpnl_fundo.add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -392,8 +387,14 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+Dashboard dash = new Dashboard();
+        dash.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
     * @param args the command line arguments
@@ -434,6 +435,7 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imgaqui;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JComboBox<String> jcbx_Estatus;

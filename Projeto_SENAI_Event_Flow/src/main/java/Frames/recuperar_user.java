@@ -40,6 +40,8 @@ public class recuperar_user extends javax.swing.JFrame {
         jlbl_Flow = new javax.swing.JLabel();
         jlbl_Logo_EF = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 0, 153));
@@ -57,7 +59,6 @@ public class recuperar_user extends javax.swing.JFrame {
         });
         getContentPane().add(jlbl_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, -1, -1));
 
-        jpswdf_Confirmar_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Confirmar_Password.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jpswdf_Confirmar_Password.setText("jPasswordField1");
         jpswdf_Confirmar_Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
@@ -70,7 +71,6 @@ public class recuperar_user extends javax.swing.JFrame {
         jlbl_Confirmar_Senha.setText("Confirme a senha");
         getContentPane().add(jlbl_Confirmar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
 
-        jpswdf_Novo_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Novo_Password.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jpswdf_Novo_Password.setText("jPasswordField1");
         jpswdf_Novo_Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
@@ -83,7 +83,6 @@ public class recuperar_user extends javax.swing.JFrame {
         jlbl_Nova_Senha.setText("Nova senha");
         getContentPane().add(jlbl_Nova_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
 
-        jtxtf_Codigo_Confirmacao.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Codigo_Confirmacao.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jtxtf_Codigo_Confirmacao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jtxtf_Codigo_Confirmacao.setMinimumSize(new java.awt.Dimension(65, 25));
@@ -137,6 +136,18 @@ public class recuperar_user extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, -1, -1));
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_Dark_Gray.jpeg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -155,6 +166,12 @@ public class recuperar_user extends javax.swing.JFrame {
         home h = new home();
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        home hm = new home();
+        hm.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,6 +217,8 @@ public class recuperar_user extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jlbl_Codigo_Confirmacao;
     private javax.swing.JLabel jlbl_Confirmar_Senha;
     private javax.swing.JLabel jlbl_Event;

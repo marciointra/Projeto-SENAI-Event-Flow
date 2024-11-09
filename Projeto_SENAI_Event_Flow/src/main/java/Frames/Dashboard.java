@@ -32,7 +32,6 @@ public class Dashboard extends javax.swing.JFrame {
         JbutPesquisar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -79,10 +78,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2.setText("Event");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 170, -1));
 
-        jButton1.setBackground(new java.awt.Color(129, 25, 184));
-        jButton1.setText("Usuario");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 140, 60));
-
         jButton2.setBackground(new java.awt.Color(129, 25, 184));
         jButton2.setText("Eventos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +85,7 @@ public class Dashboard extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 100, 60));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 120, 60));
 
         jButton3.setBackground(new java.awt.Color(129, 25, 184));
         jButton3.setText("Fornecedores");
@@ -99,11 +94,11 @@ public class Dashboard extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 110, 60));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 180, 60));
 
         jButton4.setBackground(new java.awt.Color(129, 25, 184));
         jButton4.setText("Participantes");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 110, 60));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 120, 60));
 
         jButton5.setBackground(new java.awt.Color(129, 25, 184));
         jButton5.setText("Expositor");
@@ -112,15 +107,15 @@ public class Dashboard extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 100, 60));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 120, 60));
 
         jButton6.setBackground(new java.awt.Color(129, 25, 184));
         jButton6.setText("Modelo");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 100, 60));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 120, 60));
 
         jButton7.setBackground(new java.awt.Color(129, 25, 184));
         jButton7.setText("Checklist");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 200, 60));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 180, 60));
 
         Jlbl_fundoDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Event (4).png"))); // NOI18N
         getContentPane().add(Jlbl_fundoDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -150, 1690, 1000));
@@ -194,7 +189,6 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JbutPesquisar;
     private javax.swing.JLabel Jlbl_fundoDashboard;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

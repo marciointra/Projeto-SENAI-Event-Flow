@@ -74,6 +74,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Evento = new javax.swing.JLabel();
         jlbl_BTN_Buscar = new javax.swing.JLabel();
         jlbl_BTN_Excluir = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         Jbut_Confirmar = new javax.swing.JButton();
         jlbl_BTN_Salvar = new javax.swing.JLabel();
         jlbl_FUNDO = new javax.swing.JLabel();
@@ -92,7 +93,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Codigo_Expositor.setText("CÓDIGO EXPOSITOR");
         jpnl_fundo.add(jlbl_Codigo_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, 10));
 
-        jtxtf_Expositor.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
         jtxtf_Expositor.setForeground(new java.awt.Color(135, 79, 255));
         jtxtf_Expositor.setText("C-0000");
@@ -105,7 +105,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Nome_Expositor.setText("NOME");
         jpnl_fundo.add(jlbl_Nome_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
-        jtxtf_Nome_Expositor.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Nome_Expositor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Nome_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 290, 25));
 
@@ -115,7 +114,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Responsavel.setText("RESPONSÁVEL");
         jpnl_fundo.add(jlbl_Responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
 
-        jtxtf_Responsavel.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Responsavel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Responsavel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 290, 25));
 
@@ -125,7 +123,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Contato.setText("CONTATO");
         jpnl_fundo.add(jlbl_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
-        jtxtf_Contato.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Contato.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 140, 25));
 
@@ -135,7 +132,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Tipo_Parceria.setText("PARCERIA");
         jpnl_fundo.add(jlbl_Tipo_Parceria, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
-        jcbx_parceria.setBackground(new java.awt.Color(255, 255, 255));
         jcbx_parceria.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jcbx_parceria.setForeground(new java.awt.Color(135, 79, 255));
         jcbx_parceria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PRODUTOS DESCARTAVEIS", "BEBIDAS", "COMIDAS", "SALGADOS", "SONORIZAÇÃO", "MULTIMIDEA", "ARRANJO", "DECORAÇÃO", "FLORICULTURA", "MESAS & CADEIRAS" }));
@@ -154,7 +150,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Dt_Cadastro.setText("DATA DE CADASTRO");
         jpnl_fundo.add(jlbl_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
-        jtxtf_Dt_Cadastro.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Dt_Cadastro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 140, 25));
 
@@ -164,7 +159,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Estatus.setText("ESTATUS");
         jpnl_fundo.add(jlbl_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
 
-        jcbx_Estatus.setBackground(new java.awt.Color(255, 255, 255));
         jcbx_Estatus.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jcbx_Estatus.setForeground(new java.awt.Color(135, 79, 255));
         jcbx_Estatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ATIVO", "INATIVO", "PENDENTE" }));
@@ -183,7 +177,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Descricao.setText("OBSERVAÇÕES");
         jpnl_fundo.add(jlbl_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 80, -1));
 
-        jtxta_Descricao.setBackground(new java.awt.Color(255, 255, 255));
         jtxta_Descricao.setColumns(20);
         jtxta_Descricao.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jtxta_Descricao.setForeground(new java.awt.Color(135, 79, 255));
@@ -199,7 +192,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Logradouro.setText("LOGRADOURO");
         jpnl_fundo.add(jlbl_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
 
-        jtxtf_Logradouro.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Logradouro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 270, 25));
 
@@ -209,7 +201,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Numero.setText("NÚMERO");
         jpnl_fundo.add(jlbl_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, -1, -1));
 
-        jtxtf_Numero.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Numero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 350, 70, 25));
 
@@ -219,7 +210,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Complemento.setText("COMPLEMENTO");
         jpnl_fundo.add(jlbl_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 330, -1, -1));
 
-        jtxtf_Complemento.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Complemento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, 239, 25));
 
@@ -229,7 +219,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Bairro.setText("BAIRRO");
         jpnl_fundo.add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
-        jtxtf_Bairro.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Bairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 210, 25));
 
@@ -239,7 +228,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_Cidade.setText("CIDADE");
         jpnl_fundo.add(jlbl_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, -1, -1));
 
-        jtxtf_Cidade.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Cidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, 190, 25));
 
@@ -249,7 +237,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_UF.setText("UF");
         jpnl_fundo.add(jlbl_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, -1, -1));
 
-        jtxtf_UF.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_UF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 40, 25));
 
@@ -259,7 +246,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_CEP.setText("CEP");
         jpnl_fundo.add(jlbl_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
 
-        jtxtf_CEP.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_CEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, 130, 25));
 
@@ -290,7 +276,14 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_BTN_Excluir.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        Jbut_Confirmar.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
+
         Jbut_Confirmar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         Jbut_Confirmar.setForeground(new java.awt.Color(135, 79, 255));
         Jbut_Confirmar.setText("Confirmar");
@@ -378,6 +371,12 @@ public class cadastro_expositor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Jbut_ConfirmarActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Dashboard dash = new Dashboard();
+        dash.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -418,6 +417,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Jbut_Confirmar;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jcbx_Estatus;
     private javax.swing.JComboBox<String> jcbx_parceria;
     private javax.swing.JLabel jlbl_BTN_Buscar;

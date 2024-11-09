@@ -99,7 +99,6 @@ public class cadastro_user extends javax.swing.JFrame {
         });
         getContentPane().add(jckb_Lembrar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 464, -1, -1));
 
-        jpswdf_Confirmar_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Confirmar_Password.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jpswdf_Confirmar_Password.setText("jPasswordField1");
         jpswdf_Confirmar_Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
@@ -112,7 +111,6 @@ public class cadastro_user extends javax.swing.JFrame {
         jlbl_Confirmar_Senha.setText("Confirme a senha");
         getContentPane().add(jlbl_Confirmar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 406, -1, -1));
 
-        jpswdf_Password.setBackground(new java.awt.Color(255, 255, 255));
         jpswdf_Password.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jpswdf_Password.setText("jPasswordField1");
         jpswdf_Password.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
@@ -125,7 +123,6 @@ public class cadastro_user extends javax.swing.JFrame {
         jlbl_Senha.setText("Informe a senha");
         getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 356, -1, -1));
 
-        jtxtf_Email.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Email.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jtxtf_Email.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jtxtf_Email.setMinimumSize(new java.awt.Dimension(65, 25));
@@ -142,7 +139,6 @@ public class cadastro_user extends javax.swing.JFrame {
         jlbl_Email.setText("Email");
         getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
-        jtxtf_Nome.setBackground(new java.awt.Color(255, 255, 255));
         jtxtf_Nome.setFont(new java.awt.Font("Roboto Slab SemiBold", 1, 10)); // NOI18N
         jtxtf_Nome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jtxtf_Nome.setMinimumSize(new java.awt.Dimension(65, 25));

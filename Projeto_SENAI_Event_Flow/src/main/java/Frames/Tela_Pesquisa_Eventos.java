@@ -47,6 +47,7 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
         jLabel_Data_Evento = new javax.swing.JLabel();
         jPanel_Titulo_Evento = new javax.swing.JPanel();
         jLabel_Titulo_Evento = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel_Status_Evento = new javax.swing.JPanel();
         jLabel_Status_Evento = new javax.swing.JLabel();
         Jsp_TabelaEventos_Tela_Pesquisa_Eventos = new javax.swing.JScrollPane();
@@ -58,7 +59,6 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(920, 612));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Jtxt_Pesquisar_Tela_Pesquisa_Eventos.setBackground(new java.awt.Color(255, 255, 255));
         Jtxt_Pesquisar_Tela_Pesquisa_Eventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jtxt_Pesquisar_Tela_Pesquisa_EventosActionPerformed(evt);
@@ -114,6 +114,14 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
         jPanel_Titulo_Evento.add(jLabel_Titulo_Evento);
 
         getContentPane().add(jPanel_Titulo_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 130, 30));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
 
         jPanel_Status_Evento.add(jLabel_Status_Evento);
 
@@ -327,6 +335,12 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Jbtn_status_Tela_Pesquisa_EventosActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Dashboard dash = new Dashboard();
+        dash.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -373,6 +387,7 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
     private javax.swing.JScrollPane Jsp_TabelaEventos_Tela_Pesquisa_Eventos;
     private javax.swing.JTextField Jtxt_Pesquisar_Tela_Pesquisa_Eventos;
     private javax.swing.JTable Tabela_Eventos;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel_Data_Evento;
     private javax.swing.JLabel jLabel_Status_Evento;
     private javax.swing.JLabel jLabel_Tipo_Evento;
