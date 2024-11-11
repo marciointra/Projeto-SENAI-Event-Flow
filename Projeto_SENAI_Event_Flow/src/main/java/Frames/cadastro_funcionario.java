@@ -34,15 +34,12 @@ public class cadastro_funcionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlbl_Codigo_Expositor = new javax.swing.JLabel();
-        jtxtf_Expositor = new javax.swing.JTextField();
-        jlbl_Nome_Expositor = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jtxtf_Nome_Expositor = new javax.swing.JTextField();
+        jlbl_Codigo_Fornecedor = new javax.swing.JLabel();
+        jtxtf_Fornecedor = new javax.swing.JTextField();
+        jlbl_Nome_Fornecedor = new javax.swing.JLabel();
+        Nome_Funcionario = new javax.swing.JTextField();
         jlbl_Contato = new javax.swing.JLabel();
-        jtxtf_Contato = new javax.swing.JTextField();
-        jlbl_Dt_Cadastro = new javax.swing.JLabel();
-        jtxtf_Dt_Cadastro = new javax.swing.JTextField();
+        Contato_Funcionario = new javax.swing.JTextField();
         jlbl_Estatus = new javax.swing.JLabel();
         jcbx_Estatus = new javax.swing.JComboBox<>();
         jlbl_Descricao = new javax.swing.JLabel();
@@ -61,52 +58,39 @@ public class cadastro_funcionario extends javax.swing.JFrame {
         jlbl_UF = new javax.swing.JLabel();
         jtxtf_UF = new javax.swing.JTextField();
         jlbl_CEP = new javax.swing.JLabel();
-        jtxtf_CEP = new javax.swing.JTextField();
-        jlbl_Perfil = new javax.swing.JLabel();
+        CEPfuncionario = new javax.swing.JTextField();
         jlbl_IMG_Cadastrar = new javax.swing.JLabel();
         jlbl_IMG_Evento = new javax.swing.JLabel();
-        Jbut_Confirmar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jButton2 = new javax.swing.JButton();
         jlbl_FUNDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlbl_Codigo_Expositor.setBackground(new java.awt.Color(135, 79, 255));
-        jlbl_Codigo_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Codigo_Expositor.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Codigo_Expositor.setText("CÓDIGO FUNCIONARIO");
+        jlbl_Codigo_Fornecedor.setBackground(new java.awt.Color(135, 79, 255));
+        jlbl_Codigo_Fornecedor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
+        jlbl_Codigo_Fornecedor.setForeground(new java.awt.Color(135, 79, 255));
+        jlbl_Codigo_Fornecedor.setText("CÓDIGO FUNCIONARIO");
 
-        jtxtf_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
-        jtxtf_Expositor.setForeground(new java.awt.Color(135, 79, 255));
-        jtxtf_Expositor.setText("C-0000");
-        jtxtf_Expositor.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(135, 79, 255)));
+        jtxtf_Fornecedor.setFont(new java.awt.Font("Arial Narrow", 1, 8)); // NOI18N
+        jtxtf_Fornecedor.setForeground(new java.awt.Color(135, 79, 255));
+        jtxtf_Fornecedor.setText("C-0000");
+        jtxtf_Fornecedor.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(135, 79, 255)));
 
-        jlbl_Nome_Expositor.setBackground(new java.awt.Color(135, 79, 255));
-        jlbl_Nome_Expositor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Nome_Expositor.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Nome_Expositor.setText("NOME");
+        jlbl_Nome_Fornecedor.setBackground(new java.awt.Color(135, 79, 255));
+        jlbl_Nome_Fornecedor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
+        jlbl_Nome_Fornecedor.setForeground(new java.awt.Color(135, 79, 255));
+        jlbl_Nome_Fornecedor.setText("Nome");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jtxtf_Nome_Expositor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
+        Nome_Funcionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
 
         jlbl_Contato.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Contato.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setText("CONTATO");
 
-        jtxtf_Contato.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-
-        jlbl_Dt_Cadastro.setBackground(new java.awt.Color(135, 79, 255));
-        jlbl_Dt_Cadastro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Dt_Cadastro.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Dt_Cadastro.setText("DATA DE CADASTRO");
-
-        jtxtf_Dt_Cadastro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
+        Contato_Funcionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
 
         jlbl_Estatus.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Estatus.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
@@ -183,12 +167,12 @@ public class cadastro_funcionario extends javax.swing.JFrame {
         jlbl_CEP.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setText("CEP");
 
-        jtxtf_CEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-
-        jlbl_Perfil.setBackground(new java.awt.Color(135, 79, 255));
-        jlbl_Perfil.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
-        jlbl_Perfil.setForeground(new java.awt.Color(135, 79, 255));
-        jlbl_Perfil.setText("IMAGEM");
+        CEPfuncionario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
+        CEPfuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CEPfuncionarioActionPerformed(evt);
+            }
+        });
 
         jlbl_IMG_Cadastrar.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_IMG_Cadastrar.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
@@ -200,12 +184,29 @@ public class cadastro_funcionario extends javax.swing.JFrame {
         jlbl_IMG_Evento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_IMG_Evento.setText("FUNCIONARIO");
 
-        Jbut_Confirmar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        Jbut_Confirmar.setForeground(new java.awt.Color(135, 79, 255));
-        Jbut_Confirmar.setText("Confirmar");
-        Jbut_Confirmar.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(204, 204, 255));
+        jButton1.setFont(new java.awt.Font("Ebrima", 3, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(135, 79, 255));
+        jButton1.setText("Confirmar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Jbut_ConfirmarActionPerformed(evt);
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jToggleButton1.setBackground(new java.awt.Color(132, 39, 205));
+        jToggleButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jToggleButton1.setText("inserir imagem");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -217,199 +218,230 @@ public class cadastro_funcionario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(289, 289, 289)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(279, 279, 279)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jlbl_Contato)
                     .addComponent(jlbl_Estatus)
-                    .addComponent(jcbx_Estatus, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(343, Short.MAX_VALUE))
+                    .addComponent(Contato_Funcionario)
+                    .addComponent(jcbx_Estatus, 0, 291, Short.MAX_VALUE))
+                .addContainerGap(350, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
+                            .addGap(640, 640, 640)
+                            .addComponent(jlbl_Complemento))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(640, 640, 640)
+                            .addComponent(jtxtf_Complemento, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(700, 700, 700)
+                            .addComponent(jtxtf_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
                             .addGap(590, 590, 590)
                             .addComponent(jlbl_Descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jlbl_Contato)
-                                .addComponent(jtxtf_Dt_Cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                                .addComponent(jtxtf_Contato))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGap(590, 590, 590)
                             .addComponent(jsclp_Descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(650, 650, 650)
-                            .addComponent(jlbl_Complemento))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(570, 570, 570)
-                            .addComponent(jtxtf_Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(710, 710, 710)
-                            .addComponent(jtxtf_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(760, 760, 760)
-                            .addComponent(jtxtf_CEP, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(Jbut_Confirmar))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jtxtf_Logradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(140, 140, 140)
-                            .addComponent(jtxtf_Expositor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jtxtf_Nome_Expositor, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jlbl_Dt_Cadastro))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(760, 760, 760)
+                            .addGap(750, 750, 750)
                             .addComponent(jlbl_CEP))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(510, 510, 510)
-                            .addComponent(jtxtf_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(90, 90, 90)
+                            .addComponent(jlbl_Codigo_Fornecedor))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(710, 710, 710)
-                            .addComponent(jlbl_UF))
-                        .addComponent(jlbl_FUNDO)
+                            .addGap(280, 280, 280)
+                            .addComponent(jtxtf_Logradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(650, 650, 650)
-                            .addComponent(jtxtf_Complemento, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(500, 500, 500)
+                            .addComponent(jlbl_Cidade))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(80, 80, 80)
+                            .addComponent(jToggleButton1))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(290, 290, 290)
-                            .addComponent(jlbl_Bairro))
+                            .addComponent(jButton1))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(140, 140, 140)
-                            .addComponent(jlbl_Codigo_Expositor))
+                            .addGap(750, 750, 750)
+                            .addComponent(CEPfuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(jtxtf_Bairro, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(560, 560, 560)
+                            .addComponent(jlbl_Numero))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(700, 700, 700)
+                            .addComponent(jlbl_UF))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(330, 330, 330)
                             .addComponent(jlbl_IMG_Evento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(510, 510, 510)
-                            .addComponent(jlbl_Cidade))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(160, 160, 160)
-                            .addComponent(jlbl_Perfil))
-                        .addGroup(layout.createSequentialGroup()
                             .addGap(40, 40, 40)
                             .addComponent(jlbl_IMG_Cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(570, 570, 570)
-                            .addComponent(jlbl_Numero))
+                            .addGap(560, 560, 560)
+                            .addComponent(jtxtf_Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jlbl_Nome_Expositor))
+                            .addGap(90, 90, 90)
+                            .addComponent(jtxtf_Fornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jtxtf_Bairro, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(500, 500, 500)
+                            .addComponent(jtxtf_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(290, 290, 290)
-                            .addComponent(jlbl_Logradouro)))
+                            .addGap(280, 280, 280)
+                            .addComponent(jlbl_Logradouro))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(jlbl_Nome_Fornecedor))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(Nome_Funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlbl_FUNDO)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(jlbl_Bairro)))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(138, 138, 138)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(173, 173, 173)
+                .addComponent(jlbl_Contato)
+                .addGap(4, 4, 4)
+                .addComponent(Contato_Funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlbl_Estatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jcbx_Estatus, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(395, Short.MAX_VALUE))
+                .addContainerGap(317, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(jlbl_Descricao)
-                            .addGap(7, 7, 7)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jsclp_Descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(80, 80, 80)
-                                    .addComponent(jlbl_Contato)
-                                    .addGap(7, 7, 7)
-                                    .addComponent(jtxtf_Contato, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(25, 25, 25)
-                                    .addComponent(jtxtf_Dt_Cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(10, 10, 10)
-                            .addComponent(jlbl_Complemento)
-                            .addGap(7, 7, 7)
-                            .addComponent(jtxtf_Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(25, 25, 25)
-                            .addComponent(jtxtf_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(320, 320, 320)
+                            .addComponent(jlbl_Complemento))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(400, 400, 400)
-                            .addComponent(jtxtf_CEP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(460, 460, 460)
-                            .addComponent(Jbut_Confirmar))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(350, 350, 350)
-                            .addComponent(jtxtf_Logradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(jtxtf_Expositor, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(140, 140, 140)
-                            .addComponent(jtxtf_Nome_Expositor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(270, 270, 270)
-                            .addComponent(jlbl_Dt_Cadastro))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(jlbl_CEP))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(400, 400, 400)
-                            .addComponent(jtxtf_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(jlbl_UF))
-                        .addComponent(jlbl_FUNDO)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(350, 350, 350)
+                            .addGap(340, 340, 340)
                             .addComponent(jtxtf_Complemento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(jlbl_Bairro))
+                            .addGap(390, 390, 390)
+                            .addComponent(jtxtf_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(120, 120, 120)
+                            .addComponent(jlbl_Descricao))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(140, 140, 140)
+                            .addComponent(jsclp_Descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(370, 370, 370)
+                            .addComponent(jlbl_CEP))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(160, 160, 160)
-                            .addComponent(jlbl_Codigo_Expositor, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlbl_Codigo_Fornecedor))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(340, 340, 340)
+                            .addComponent(jtxtf_Logradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(360, 360, 360)
+                            .addComponent(jToggleButton1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(450, 450, 450)
+                            .addComponent(jButton1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(390, 390, 390)
+                            .addComponent(CEPfuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(390, 390, 390)
+                            .addComponent(jtxtf_Bairro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(370, 370, 370)
+                            .addComponent(jlbl_UF))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(22, 22, 22)
                             .addComponent(jlbl_IMG_Evento, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(380, 380, 380)
-                            .addComponent(jlbl_Cidade))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(370, 370, 370)
-                            .addComponent(jlbl_Perfil))
-                        .addGroup(layout.createSequentialGroup()
                             .addGap(20, 20, 20)
                             .addComponent(jlbl_IMG_Cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(330, 330, 330)
+                            .addGap(180, 180, 180)
+                            .addComponent(jtxtf_Fornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(320, 320, 320)
+                            .addComponent(jlbl_Logradouro))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(150, 150, 150)
+                            .addComponent(jlbl_Nome_Fornecedor))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(170, 170, 170)
+                            .addComponent(Nome_Funcionario, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlbl_FUNDO)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(370, 370, 370)
+                            .addComponent(jlbl_Bairro))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(370, 370, 370)
+                            .addComponent(jlbl_Cidade))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(320, 320, 320)
                             .addComponent(jlbl_Numero))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(jlbl_Nome_Expositor))
+                            .addGap(340, 340, 340)
+                            .addComponent(jtxtf_Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(400, 400, 400)
-                            .addComponent(jtxtf_Bairro, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(330, 330, 330)
-                            .addComponent(jlbl_Logradouro)))
+                            .addGap(390, 390, 390)
+                            .addComponent(jtxtf_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jcbx_EstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbx_EstatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbx_EstatusActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement statement = null;
+
+            String url = "jdbc:mysql://127.0.0.1:3306/EventFlow";
+            String user = "root";
+            String password = "";
+
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "INSERT INTO Fornecedor(Nome_Funcionario, Email_Funcionario, CEPfuncionario) VALUES (?, ?, ?)";
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, Nome_Funcionario.getText());
+            statement.setString(2, Contato_Funcionario.getText());
+            statement.setString(3, CEPfuncionario.getText());
+            //não consegui inserir esses itens de combo box no banco código usado:  statement.setString(4, jcbx_Estatus.getSelectedItem().toString())
+
+
+            System.out.println("Deu certo!");
+            JOptionPane.showMessageDialog(null, "Funcionario cadastrado com sucesso!");
+            statement.executeUpdate();
+
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(cadastro_fornecedor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Dashboard dash = new Dashboard();
@@ -417,41 +449,9 @@ public class cadastro_funcionario extends javax.swing.JFrame {
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jcbx_EstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbx_EstatusActionPerformed
+    private void CEPfuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CEPfuncionarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jcbx_EstatusActionPerformed
-
-    private void Jbut_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbut_ConfirmarActionPerformed
-        try {
-            // TODO add your handling code here:
-            Connection conexao = null;
-            PreparedStatement statement = null;
-
-            String url = "jdbc:mysql://127.0.0.1:3306/EventFlow"; // se der errado, substitua localhost por: 127.0.0.1:3306
-            String user = "root";
-            String password = "";
-
-            conexao = DriverManager.getConnection(url, user, password);
-            String sql = "INSERT INTO Expositor(Nome_Funcionario , Email_Funcionario, Data_Cadastro, CEP) VALUES(?, ?, ?, ?, ?)";
-            statement = conexao.prepareStatement(sql);
-
-            statement.setString(1, jtxtf_Nome_Expositor.getText()); //nome
-            statement.setString(3, jtxtf_Contato.getText()); //e-mail
-            statement.setInt(4, Integer.parseInt(jtxtf_Dt_Cadastro.getText())); // data
-            statement.setInt(5, Integer.parseInt(jtxtf_CEP.getText()));
-
-            System.out.println("Deu certo");
-            statement.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Expositor cadastrado com sucesso!");
-            cadastro_funcionario.this.dispose();
-
-            Dashboard ds = new Dashboard();
-            ds.setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(cadastro_funcionario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_Jbut_ConfirmarActionPerformed
+    }//GEN-LAST:event_CEPfuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -489,37 +489,35 @@ public class cadastro_funcionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Jbut_Confirmar;
+    private javax.swing.JTextField CEPfuncionario;
+    private javax.swing.JTextField Contato_Funcionario;
+    private javax.swing.JTextField Nome_Funcionario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JComboBox<String> jcbx_Estatus;
     private javax.swing.JLabel jlbl_Bairro;
     private javax.swing.JLabel jlbl_CEP;
     private javax.swing.JLabel jlbl_Cidade;
-    private javax.swing.JLabel jlbl_Codigo_Expositor;
+    private javax.swing.JLabel jlbl_Codigo_Fornecedor;
     private javax.swing.JLabel jlbl_Complemento;
     private javax.swing.JLabel jlbl_Contato;
     private javax.swing.JLabel jlbl_Descricao;
-    private javax.swing.JLabel jlbl_Dt_Cadastro;
     private javax.swing.JLabel jlbl_Estatus;
     private javax.swing.JLabel jlbl_FUNDO;
     private javax.swing.JLabel jlbl_IMG_Cadastrar;
     private javax.swing.JLabel jlbl_IMG_Evento;
     private javax.swing.JLabel jlbl_Logradouro;
-    private javax.swing.JLabel jlbl_Nome_Expositor;
+    private javax.swing.JLabel jlbl_Nome_Fornecedor;
     private javax.swing.JLabel jlbl_Numero;
-    private javax.swing.JLabel jlbl_Perfil;
     private javax.swing.JLabel jlbl_UF;
     private javax.swing.JScrollPane jsclp_Descricao;
     private javax.swing.JTextArea jtxta_Descricao;
     private javax.swing.JTextField jtxtf_Bairro;
-    private javax.swing.JTextField jtxtf_CEP;
     private javax.swing.JTextField jtxtf_Cidade;
     private javax.swing.JTextField jtxtf_Complemento;
-    private javax.swing.JTextField jtxtf_Contato;
-    private javax.swing.JTextField jtxtf_Dt_Cadastro;
-    private javax.swing.JTextField jtxtf_Expositor;
+    private javax.swing.JTextField jtxtf_Fornecedor;
     private javax.swing.JTextField jtxtf_Logradouro;
-    private javax.swing.JTextField jtxtf_Nome_Expositor;
     private javax.swing.JTextField jtxtf_Numero;
     private javax.swing.JTextField jtxtf_UF;
     // End of variables declaration//GEN-END:variables

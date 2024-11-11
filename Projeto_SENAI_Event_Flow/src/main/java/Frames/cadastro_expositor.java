@@ -4,16 +4,12 @@
  */
 package Frames;
 
-import java.awt.Image;
-import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -70,6 +66,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jtxtf_UF = new javax.swing.JTextField();
         jlbl_CEP = new javax.swing.JLabel();
         jtxtf_CEP = new javax.swing.JTextField();
+        jlbl_Perfil = new javax.swing.JLabel();
         jlbl_IMG_Perfil = new javax.swing.JLabel();
         jlbl_IMG_Logo_EF = new javax.swing.JLabel();
         jlbl_IMG_Cadastrar = new javax.swing.JLabel();
@@ -80,8 +77,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         Jbut_Confirmar = new javax.swing.JButton();
         jlbl_BTN_Salvar = new javax.swing.JLabel();
-        img_user_expositor = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
         jlbl_FUNDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -102,6 +97,11 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jtxtf_Expositor.setForeground(new java.awt.Color(135, 79, 255));
         jtxtf_Expositor.setText("C-0000");
         jtxtf_Expositor.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(135, 79, 255)));
+        jtxtf_Expositor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtf_ExpositorActionPerformed(evt);
+            }
+        });
         jpnl_fundo.add(jtxtf_Expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, 10));
 
         jlbl_Nome_Expositor.setBackground(new java.awt.Color(135, 79, 255));
@@ -253,6 +253,12 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
         jtxtf_CEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jpnl_fundo.add(jtxtf_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, 130, 25));
+
+        jlbl_Perfil.setBackground(new java.awt.Color(135, 79, 255));
+        jlbl_Perfil.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
+        jlbl_Perfil.setForeground(new java.awt.Color(135, 79, 255));
+        jlbl_Perfil.setText("IMAGEM");
+        jpnl_fundo.add(jlbl_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
         jpnl_fundo.add(jlbl_IMG_Perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
         jpnl_fundo.add(jlbl_IMG_Logo_EF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, -1, -1));
 
@@ -281,7 +287,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
+        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 30));
 
         Jbut_Confirmar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         Jbut_Confirmar.setForeground(new java.awt.Color(135, 79, 255));
@@ -300,17 +306,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
             }
         });
         jpnl_fundo.add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
-        jpnl_fundo.add(img_user_expositor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 130, 110));
-
-        jToggleButton1.setBackground(new java.awt.Color(132, 39, 205));
-        jToggleButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jToggleButton1.setText("inserir imagem");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        jpnl_fundo.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, -1));
 
         jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
@@ -387,35 +382,9 @@ public class cadastro_expositor extends javax.swing.JFrame {
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void jtxtf_ExpositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtf_ExpositorActionPerformed
         // TODO add your handling code here:
-
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Escolha uma imagem");
-
-        // os tipos que eu vou permitir
-        fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Imagens", "jpg", "png"));
-
-        // aqui eu estou mostrando o meu filechooser
-        int userSelection = fileChooser.showOpenDialog(this);
-
-        if(userSelection == JFileChooser.APPROVE_OPTION){
-            File fileToUpload = fileChooser.getSelectedFile();
-            System.out.println("Arquivo Selecionado: " + fileToUpload.getAbsolutePath());
-
-            // só to garantindo que a minha JLabel tem um tamanho que seja maior que 0
-            if(img_user_expositor.getWidth() > 0 && img_user_expositor.getHeight() > 0){
-
-                //aqui eu consigo exibir a imagem
-                ImageIcon imageIcon = new ImageIcon(fileToUpload.getAbsolutePath());
-                Image image = imageIcon.getImage().getScaledInstance(img_user_expositor.getWidth(), img_user_expositor.getHeight(), Image.SCALE_SMOOTH);
-                img_user_expositor.setIcon(new ImageIcon(image));
-            }
-            else{
-                System.out.println("A sua jlabel tem altura ou largura igual a 0");
-            }
-        }
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_jtxtf_ExpositorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -457,9 +426,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Jbut_Confirmar;
-    private javax.swing.JLabel img_user_expositor;
     private javax.swing.JButton jButton2;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JComboBox<String> jcbx_Estatus;
     private javax.swing.JComboBox<String> jcbx_parceria;
     private javax.swing.JLabel jlbl_BTN_Buscar;
@@ -483,6 +450,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
     private javax.swing.JLabel jlbl_Logradouro;
     private javax.swing.JLabel jlbl_Nome_Expositor;
     private javax.swing.JLabel jlbl_Numero;
+    private javax.swing.JLabel jlbl_Perfil;
     private javax.swing.JLabel jlbl_Responsavel;
     private javax.swing.JLabel jlbl_Tipo_Parceria;
     private javax.swing.JLabel jlbl_UF;

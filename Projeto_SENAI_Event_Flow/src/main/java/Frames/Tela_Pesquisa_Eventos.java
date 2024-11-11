@@ -121,7 +121,7 @@ public class Tela_Pesquisa_Eventos extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 30));
 
         jPanel_Status_Evento.add(jLabel_Status_Evento);
 

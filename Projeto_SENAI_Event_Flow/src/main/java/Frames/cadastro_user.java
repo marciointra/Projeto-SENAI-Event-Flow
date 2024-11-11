@@ -107,7 +107,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jpswdf_Confirmar_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 426, 240, -1));
 
         jlbl_Confirmar_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
-        jlbl_Confirmar_Senha.setForeground(new java.awt.Color(176, 161, 183));
+        jlbl_Confirmar_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Confirmar_Senha.setText("Confirme a senha");
         getContentPane().add(jlbl_Confirmar_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 406, -1, -1));
 
@@ -119,7 +119,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jpswdf_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 376, 240, -1));
 
         jlbl_Senha.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
-        jlbl_Senha.setForeground(new java.awt.Color(176, 161, 183));
+        jlbl_Senha.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Senha.setText("Informe a senha");
         getContentPane().add(jlbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 356, -1, -1));
 
@@ -135,7 +135,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jtxtf_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 320, -1));
 
         jlbl_Email.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
-        jlbl_Email.setForeground(new java.awt.Color(176, 161, 183));
+        jlbl_Email.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Email.setText("Email");
         getContentPane().add(jlbl_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
@@ -151,13 +151,12 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(jtxtf_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 320, -1));
 
         jlbl_Nome.setFont(new java.awt.Font("Arial Narrow", 1, 12)); // NOI18N
-        jlbl_Nome.setForeground(new java.awt.Color(176, 161, 183));
+        jlbl_Nome.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_Nome.setText("Nome");
         getContentPane().add(jlbl_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 248, -1, -1));
 
-        jlbl_por_que.setBackground(new java.awt.Color(176, 161, 183));
         jlbl_por_que.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jlbl_por_que.setForeground(new java.awt.Color(176, 161, 183));
+        jlbl_por_que.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_por_que.setText("Por que ");
         getContentPane().add(jlbl_por_que, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
@@ -166,9 +165,8 @@ public class cadastro_user extends javax.swing.JFrame {
         jlbl_todo_mundo_quer_estar_no_centro.setText("todo mundo quer estar no centro");
         getContentPane().add(jlbl_todo_mundo_quer_estar_no_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
-        jlbl_da_festa.setBackground(new java.awt.Color(176, 161, 183));
         jlbl_da_festa.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        jlbl_da_festa.setForeground(new java.awt.Color(176, 161, 183));
+        jlbl_da_festa.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_da_festa.setText("da festa");
         getContentPane().add(jlbl_da_festa, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, -1, -1));
 
@@ -194,7 +192,7 @@ public class cadastro_user extends javax.swing.JFrame {
         getContentPane().add(Confirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 536, -1, -1));
 
         jlblFundo.setForeground(new java.awt.Color(51, 51, 51));
-        jlblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
+        jlblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_Dark_Gray.jpeg"))); // NOI18N
         getContentPane().add(jlblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 450, 620));
 
         pack();
