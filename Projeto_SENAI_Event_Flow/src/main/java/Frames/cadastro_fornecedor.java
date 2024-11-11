@@ -4,12 +4,16 @@
  */
 package Frames;
 
+import java.awt.Image;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -74,10 +78,11 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jlbl_BTN_Excluir = new javax.swing.JLabel();
         jlbl_BTN_Salvar = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         imgaqui = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        img_user = new javax.swing.JLabel();
         jlbl_FUNDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,25 +109,25 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jlbl_Nome_Fornecedor.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Nome_Fornecedor.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Nome_Fornecedor.setText("Nome");
-        jpnl_fundo.add(jlbl_Nome_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, -1, -1));
+        jpnl_fundo.add(jlbl_Nome_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
 
         jtxtf_Nome_Fornecedor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Nome_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 290, 25));
+        jpnl_fundo.add(jtxtf_Nome_Fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 290, 25));
 
         jlbl_Contato.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Contato.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Contato.setText("CONTATO");
-        jpnl_fundo.add(jlbl_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
+        jpnl_fundo.add(jlbl_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
 
         jtxtf_Contato.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 140, 25));
+        jpnl_fundo.add(jtxtf_Contato, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 140, 25));
 
         jlbl_Tipo_Servico.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Tipo_Servico.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Tipo_Servico.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Tipo_Servico.setText("SERVIÇO PRESTADO");
-        jpnl_fundo.add(jlbl_Tipo_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, -1, -1));
+        jpnl_fundo.add(jlbl_Tipo_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, -1, -1));
 
         jcbx_Tipo_Servico.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jcbx_Tipo_Servico.setForeground(new java.awt.Color(135, 79, 255));
@@ -134,22 +139,22 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
                 jcbx_Tipo_ServicoActionPerformed(evt);
             }
         });
-        jpnl_fundo.add(jcbx_Tipo_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 140, 25));
+        jpnl_fundo.add(jcbx_Tipo_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 140, 25));
 
         jlbl_Dt_Cadastro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Cadastro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Dt_Cadastro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Dt_Cadastro.setText("DATA DE CADASTRO");
-        jpnl_fundo.add(jlbl_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+        jpnl_fundo.add(jlbl_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
         jtxtf_Dt_Cadastro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 140, 25));
+        jpnl_fundo.add(jtxtf_Dt_Cadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 140, 25));
 
         jlbl_Estatus.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Estatus.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Estatus.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Estatus.setText("ESTATUS");
-        jpnl_fundo.add(jlbl_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, -1, -1));
+        jpnl_fundo.add(jlbl_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, -1, -1));
 
         jcbx_Estatus.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jcbx_Estatus.setForeground(new java.awt.Color(135, 79, 255));
@@ -161,13 +166,13 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
                 jcbx_EstatusActionPerformed(evt);
             }
         });
-        jpnl_fundo.add(jcbx_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 140, 25));
+        jpnl_fundo.add(jcbx_Estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 140, 25));
 
         jlbl_Descricao.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Descricao.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Descricao.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Descricao.setText("OBSERVAÇÕES");
-        jpnl_fundo.add(jlbl_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 80, -1));
+        jpnl_fundo.add(jlbl_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 80, -1));
 
         jtxta_Descricao.setColumns(20);
         jtxta_Descricao.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
@@ -176,70 +181,70 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jtxta_Descricao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
         jsclp_Descricao.setViewportView(jtxta_Descricao);
 
-        jpnl_fundo.add(jsclp_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 300, 180));
+        jpnl_fundo.add(jsclp_Descricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 300, 180));
 
         jlbl_Logradouro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Logradouro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Logradouro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Logradouro.setText("LOGRADOURO");
-        jpnl_fundo.add(jlbl_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, -1));
+        jpnl_fundo.add(jlbl_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
 
         jtxtf_Logradouro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 270, 25));
+        jpnl_fundo.add(jtxtf_Logradouro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 270, 25));
 
         jlbl_Numero.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Numero.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Numero.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Numero.setText("NÚMERO");
-        jpnl_fundo.add(jlbl_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
+        jpnl_fundo.add(jlbl_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, -1, -1));
 
         jtxtf_Numero.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, 70, 25));
+        jpnl_fundo.add(jtxtf_Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, 70, 25));
 
         jlbl_Complemento.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Complemento.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Complemento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Complemento.setText("COMPLEMENTO");
-        jpnl_fundo.add(jlbl_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 320, -1, -1));
+        jpnl_fundo.add(jlbl_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 370, -1, -1));
 
         jtxtf_Complemento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 239, 25));
+        jpnl_fundo.add(jtxtf_Complemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 239, 25));
 
         jlbl_Bairro.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Bairro.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Bairro.setText("BAIRRO");
-        jpnl_fundo.add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, -1, -1));
+        jpnl_fundo.add(jlbl_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, -1, -1));
 
         jtxtf_Bairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 210, 25));
+        jpnl_fundo.add(jtxtf_Bairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 210, 25));
 
         jlbl_Cidade.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Cidade.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_Cidade.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_Cidade.setText("CIDADE");
-        jpnl_fundo.add(jlbl_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, -1));
+        jpnl_fundo.add(jlbl_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, -1, -1));
 
         jtxtf_Cidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 190, 25));
+        jpnl_fundo.add(jtxtf_Cidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 190, 25));
 
         jlbl_UF.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_UF.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_UF.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_UF.setText("UF");
-        jpnl_fundo.add(jlbl_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, -1, -1));
+        jpnl_fundo.add(jlbl_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, -1));
 
         jtxtf_UF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 40, 25));
+        jpnl_fundo.add(jtxtf_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 40, 25));
 
         jlbl_CEP.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
         jlbl_CEP.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_CEP.setText("CEP");
-        jpnl_fundo.add(jlbl_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 370, -1, -1));
+        jpnl_fundo.add(jlbl_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, -1, -1));
 
         jtxtf_CEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(135, 79, 255), 1, true));
-        jpnl_fundo.add(jtxtf_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 390, 130, 25));
+        jpnl_fundo.add(jtxtf_CEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, 130, 25));
 
         jlbl_Perfil.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_Perfil.setFont(new java.awt.Font("Arial Narrow", 1, 10)); // NOI18N
@@ -273,7 +278,7 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jpnl_fundo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, -1, -1));
+        jpnl_fundo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, -1, -1));
 
         jlbl_BTN_Excluir.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
@@ -285,6 +290,7 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
             }
         });
         jpnl_fundo.add(jlbl_BTN_Salvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
+        jpnl_fundo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
 
         jToggleButton1.setBackground(new java.awt.Color(132, 39, 205));
         jToggleButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -297,26 +303,15 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
         jpnl_fundo.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, -1, -1));
         jpnl_fundo.add(imgaqui, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltar.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jpnl_fundo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 0, -1, -1));
+        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 40, 50, 30));
+        jpnl_fundo.add(img_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 140, 140));
 
         jlbl_FUNDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
@@ -365,20 +360,22 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
             String password = "";
             
             conexao = DriverManager.getConnection(url, user, password);
-            String sql = "INSERT INTO Fornecedor(Nome, Email_Fornecedor, Data_Cadastro, CEPfornecedor) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO Fornecedor(Nome, Email_Fornecedor, Data_Cadastro, CEPfornecedor, StatusFornecedorEvento, StatusFornecedorGeral) VALUES (?, ?, ?, ?, ?, ?)";
             statement = conexao.prepareStatement(sql);
             statement.setString(1, jtxtf_Nome_Fornecedor.getText());
             statement.setString(2, jtxtf_Contato.getText());
             statement.setString(3, jtxtf_Dt_Cadastro.getText());
-            //não consegui inserir esses itens de combo box no banco código usado:  statement.setString(4, jcbx_Estatus.getSelectedItem().toString())
-            statement.setString(5, jtxtf_CEP.getText());
+            statement.setString(4, jtxtf_CEP.getText());
+            statement.setString(5, jcbx_Estatus.getSelectedItem().toString());
+            statement.setString(6, jcbx_Tipo_Servico.getSelectedItem().toString());
             
             System.out.println("Deu certo!");
             JOptionPane.showMessageDialog(null, "Fornecedor cadastrado com sucesso!");
             statement.executeUpdate();
             
-            Dashboard dashboard = new Dashboard();
-            dashboard.setVisible(true);
+            Visualização_fornecedor vf = new Visualização_fornecedor();
+            vf.setVisible(true);
+            this.dispose();
             
         } catch (SQLException ex) {
             Logger.getLogger(cadastro_fornecedor.class.getName()).log(Level.SEVERE, null, ex);
@@ -388,6 +385,34 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
        // TODO add your handling code here:
+       
+       JFileChooser fileChooser = new JFileChooser();
+       fileChooser.setDialogTitle("Escolha uma imagem");
+       
+       // os tipos que eu vou permitir
+       fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Imagens", "jpg", "png"));
+       
+       // aqui eu estou mostrando o meu filechooser
+       int userSelection = fileChooser.showOpenDialog(this);
+       
+       if(userSelection == JFileChooser.APPROVE_OPTION){
+           File fileToUpload = fileChooser.getSelectedFile();
+           System.out.println("Arquivo Selecionado: " + fileToUpload.getAbsolutePath());   
+       
+       
+       // só to garantindo que a minha JLabel tem um tamanho que seja maior que 0
+       if(img_user.getWidth() > 0 && img_user.getHeight() > 0){
+
+           
+           //aqui eu consigo exibir a imagem
+           ImageIcon imageIcon = new ImageIcon(fileToUpload.getAbsolutePath());
+           Image image = imageIcon.getImage().getScaledInstance(img_user.getWidth(), img_user.getHeight(), Image.SCALE_SMOOTH);
+           img_user.setIcon(new ImageIcon(image));
+       }  
+       else{
+           System.out.println("A sua jlabel tem altura ou largura igual a 0");
+           }
+       }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -433,10 +458,11 @@ Dashboard dash = new Dashboard();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel img_user;
     private javax.swing.JLabel imgaqui;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JComboBox<String> jcbx_Estatus;
     private javax.swing.JComboBox<String> jcbx_Tipo_Servico;
