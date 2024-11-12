@@ -1,0 +1,16 @@
+fazer um registro na tela de fornecedor aonde o fornecedor de
+verá ter um campo para relacionar o evento em que ele está inserido
+e colocar um text field na tela de visualização de evento
+para relacionar.
+
+
+na tela de visualização de evento, eu preciso ter a opção
+de editar eventos já registrados. já tem o botão, basta fazer o código prescrito abaixo: 
+
+
+para fazer a atualização, faço um botão que puxe uma tela bem pequena na mesma tela para fazer o UPDATE de algum evento já registrado, isso na tela de visualização de eventos.
+
+
+Inserir na tela de visualizar evento uma tabela que mostre os eventos mais próximos, e esses eventos mais próximos devem ser limitados a 3.
+
+relacionar o fornecedor e em qual evento que ele está trabalhando, para ontem.
