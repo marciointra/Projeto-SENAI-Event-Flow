@@ -17,16 +17,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author wpass
  */
-public class tabela_visualizarEvento extends javax.swing.JFrame {
+public class Editar_Evento extends javax.swing.JFrame {
 
     /**
-     * Creates new form tabela_visualizarEvento
+     * Creates new form Editar_Evento
      */
-    public tabela_visualizarEvento() {
+    public Editar_Evento() {
         initComponents();
     }
     
-    public void Tabela_visualizarEvento(String sql){
+public void c(String sql){
         try {
             Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost/EventFlow", "root", "");
             PreparedStatement teste = (PreparedStatement) con.prepareStatement(sql);
@@ -34,7 +34,7 @@ public class tabela_visualizarEvento extends javax.swing.JFrame {
             
             ResultSet resultado = teste.executeQuery(sql);
             
-            DefaultTableModel model = (DefaultTableModel) Tabela_visualizarEvento.getModel();
+            DefaultTableModel model = (DefaultTableModel) c.getModel();
             model.setNumRows(0);
             
             while(resultado.next())
@@ -51,8 +51,8 @@ public class tabela_visualizarEvento extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Visualização_Evento.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }   
-
+    }        
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -63,13 +63,22 @@ public class tabela_visualizarEvento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Tabela_visualizarEvento = new javax.swing.JTable();
+        jlbl_visualizar = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        c = new javax.swing.JTable();
+        background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Tabela_visualizarEvento.setForeground(new java.awt.Color(40, 40, 40));
-        Tabela_visualizarEvento.setModel(new javax.swing.table.DefaultTableModel(
+        jlbl_visualizar.setBackground(new java.awt.Color(255, 255, 255));
+        jlbl_visualizar.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
+        jlbl_visualizar.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_visualizar.setText("EDITAR");
+        getContentPane().add(jlbl_visualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 60));
+
+        c.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -77,57 +86,39 @@ public class tabela_visualizarEvento extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Nome", "Tipo", "Data"
+                "Titulo", "Tipo", "Data"
             }
         ));
-        Tabela_visualizarEvento.setSelectionForeground(new java.awt.Color(40, 40, 40));
-        Tabela_visualizarEvento.addAncestorListener(new javax.swing.event.AncestorListener() {
+        c.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                Tabela_visualizarEventoAncestorAdded(evt);
+                cAncestorAdded(evt);
             }
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        Tabela_visualizarEvento.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                Tabela_visualizarEventoComponentShown(evt);
-            }
-        });
-        jScrollPane1.setViewportView(Tabela_visualizarEvento);
+        jScrollPane2.setViewportView(c);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 370, 200));
+
+        background.setBackground(new java.awt.Color(135, 79, 255));
+        background.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
+        background.setForeground(new java.awt.Color(135, 79, 255));
+        background.setText("EVENTO");
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 180, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Tabela_visualizarEventoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_Tabela_visualizarEventoAncestorAdded
-        this.Tabela_visualizarEvento("SELECT * FROM Evento ORDER BY ID_Evento DESC");
-    }//GEN-LAST:event_Tabela_visualizarEventoAncestorAdded
-
-    private void Tabela_visualizarEventoComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_Tabela_visualizarEventoComponentShown
+    private void cAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_cAncestorAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_Tabela_visualizarEventoComponentShown
+        this.c("SELECT * FROM Evento ORDER BY TituloEvento DESC");
+    }//GEN-LAST:event_cAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -146,30 +137,33 @@ public class tabela_visualizarEvento extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tabela_visualizarEvento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Editar_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tabela_visualizarEvento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Editar_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tabela_visualizarEvento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Editar_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tabela_visualizarEvento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Editar_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tabela_visualizarEvento().setVisible(true);
+                new Editar_Evento().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Tabela_visualizarEvento;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel background;
+    private javax.swing.JTable c;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel jlbl_visualizar;
     // End of variables declaration//GEN-END:variables
 
-    private void Tabela_visualizarEvento() {
-       throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    private void jScrollPane2(String select__from_Evento_ORDER_BY_TituloEvento) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

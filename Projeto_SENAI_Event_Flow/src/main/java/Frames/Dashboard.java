@@ -4,6 +4,15 @@
  */
 package Frames;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author wpass
@@ -37,8 +46,7 @@ public class Dashboard extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        Funcionario = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         Jlbl_fundoDashboard = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -114,18 +122,9 @@ public class Dashboard extends javax.swing.JFrame {
         jButton6.setText("Modelo");
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 120, 60));
 
-        Funcionario.setBackground(new java.awt.Color(129, 25, 184));
-        Funcionario.setText("Funcionario");
-        Funcionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FuncionarioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Funcionario, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 180, 60));
-
-        jButton8.setBackground(new java.awt.Color(129, 25, 184));
-        jButton8.setText("Checklist");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 180, 60));
+        jButton7.setBackground(new java.awt.Color(129, 25, 184));
+        jButton7.setText("Checklist");
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 180, 60));
 
         Jlbl_fundoDashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Event (4).png"))); // NOI18N
         getContentPane().add(Jlbl_fundoDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, -150, 1690, 1000));
@@ -134,17 +133,76 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        cadastro_evento cadastroEvento = new cadastro_evento();
-        cadastroEvento.setVisible(true);
-        this.dispose();
+        try {
+            // TODO add your handling code here:
+            Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/EventFlow", "root", "");
+            String sql = "SELECT COUNT(*) AS total FROM Evento";
+            PreparedStatement statement = conexao.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+            
+            if(resultSet.next()){
+                int totalEventos = resultSet.getInt("total");
+                
+                if(totalEventos > 0){
+                    
+                    // se for maior que zero, ele é redirecionado para a tela de visualização de eventos
+                    Visualização_Evento visualizarEventos = new Visualização_Evento();
+                    visualizarEventos.setVisible(true); 
+                }
+                  
+                else{
+                    // Redirecionando para a tela de cadsatro de evento
+                    JOptionPane.showMessageDialog(null, "Nenhum fornecedor registrado");
+                    cadastro_evento cadastroEvento = new cadastro_evento();
+                    cadastroEvento.setVisible(true);
+                }
+                
+                this.dispose();
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        cadastro_fornecedor cf = new cadastro_fornecedor();
-        cf.setVisible(true);
-        this.dispose();
+        try {
+            // TODO add your handling code here:
+            
+            Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/EventFlow", "root", "");
+            String sql = "SELECT COUNT(*) AS total FROM Fornecedor";
+            PreparedStatement statement = conexao.prepareStatement(sql);
+            ResultSet resultset = statement.executeQuery();
+            
+            if(resultset.next()){
+                int totalFornecedores = resultset.getInt("Total");
+                
+                if(totalFornecedores > 0){
+                    
+                    // se for maior que zero, ele é redirecionado para a tela de visualização de fornecedores
+                    Visualização_fornecedor vf = new Visualização_fornecedor();
+                    vf.setVisible(true);
+                    this.dispose();
+                }
+                
+                else{
+                 // Mando cadastrar um fornecedor
+                 
+                  JOptionPane.showMessageDialog(null, "Nenhum fornecedor registrado");
+                 cadastro_fornecedor cf = new cadastro_fornecedor();
+                 cf.setVisible(true);
+                 this.dispose();
+                }
+                
+                
+            }
+            
+            // cadastro_fornecedor cf = new cadastro_fornecedor();
+            // cf.setVisible(true);
+            // this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -160,13 +218,6 @@ public class Dashboard extends javax.swing.JFrame {
         tpe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JbutPesquisarActionPerformed
-
-    private void FuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FuncionarioActionPerformed
-        // TODO add your handling code here:
-        cadastro_funcionario fun = new cadastro_funcionario();
-        fun.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_FuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,7 +255,6 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Funcionario;
     private javax.swing.JButton JbutPesquisar;
     private javax.swing.JLabel Jlbl_fundoDashboard;
     private javax.swing.JButton jButton2;
@@ -212,7 +262,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jlbl_da_festa;

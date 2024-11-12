@@ -229,6 +229,9 @@ public class home extends javax.swing.JFrame {
             }
             else{
                 JOptionPane.showMessageDialog(null, "Usuario não encontrado.");
+                cadastro_user cu = new cadastro_user();
+                cu.setVisible(true);
+                this.dispose();
             }
         } catch (SQLException ex) {
             Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);

@@ -28,6 +28,34 @@ public class Visualização_Evento extends javax.swing.JFrame {
         initComponents();
     }
     
+    public void jTable1(String sql){
+        try {
+            Connection con = (Connection)DriverManager.getConnection("jdbc:mysql://localhost/EventFlow", "root", "");
+            PreparedStatement statement = (PreparedStatement) con.prepareStatement(sql);
+            statement.execute();
+            
+            ResultSet resultado = statement.executeQuery();
+            
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            model.setNumRows(0);
+            
+            while(resultado.next()){
+                model.addRow(new Object[]
+                {
+                    resultado.getString("TituloEvento"),
+                    resultado.getString("TipoEvento"),
+                    resultado.getString("DataEvento_inicial")  
+                });
+            }
+             statement.close();
+             con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Visualização_Evento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,20 +69,30 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jlbl_IMG_Evento = new javax.swing.JLabel();
         jlbl_visualizar = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jtxt_titulo = new javax.swing.JTextField();
         jtxt_tipoEvento = new javax.swing.JTextField();
         jtxt_contatoEvento = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jlbl_visualizar1 = new javax.swing.JLabel();
+        jlbl_IMG_Evento1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jlbl_visualizar2 = new javax.swing.JLabel();
+        jlbl_IMG_Evento2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jTextField2 = new javax.swing.JTextField();
         jtxt_statusEvento = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
@@ -86,8 +124,11 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jlbl_visualizar.setText("VISUALIZAR");
         getContentPane().add(jlbl_visualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 270, 60));
 
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Eventos Cadastrados");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 206, -1, 30));
+
         jButton6.setBackground(new java.awt.Color(129, 25, 184));
-        jButton6.setText("Eventos cadastrados");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -95,16 +136,22 @@ public class Visualização_Evento extends javax.swing.JFrame {
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 190, 150, 60));
 
+        jLabel11.setText("Editar Evento");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 210, -1, 20));
+
         jButton4.setBackground(new java.awt.Color(129, 25, 184));
-        jButton4.setText("Cadastrar evento");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 130, 60));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 190, 130, 60));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 150, -1));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 210, 20));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Cadastrar Evento");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, -1, 40));
 
         jButton1.setBackground(new java.awt.Color(129, 25, 184));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
@@ -114,6 +161,14 @@ public class Visualização_Evento extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 320, 30, -1));
+
+        jButton5.setBackground(new java.awt.Color(129, 25, 184));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 130, 60));
 
         jtxt_titulo.setText("TituloEvento");
         getContentPane().add(jtxt_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 140, -1));
@@ -132,6 +187,18 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jLabel2.setText("Meio de contato");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 150, 20));
 
+        jlbl_visualizar1.setBackground(new java.awt.Color(255, 255, 255));
+        jlbl_visualizar1.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
+        jlbl_visualizar1.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_visualizar1.setText("VISUALIZAR");
+        getContentPane().add(jlbl_visualizar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 270, 60));
+
+        jlbl_IMG_Evento1.setBackground(new java.awt.Color(135, 79, 255));
+        jlbl_IMG_Evento1.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
+        jlbl_IMG_Evento1.setForeground(new java.awt.Color(135, 79, 255));
+        jlbl_IMG_Evento1.setText("EVENTO");
+        getContentPane().add(jlbl_IMG_Evento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 120, 180, 60));
+
         jLabel5.setText("Tipo do evento");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 150, 20));
 
@@ -141,11 +208,47 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jLabel6.setText("Fornecedor");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, -1));
 
+        jlbl_visualizar2.setBackground(new java.awt.Color(255, 255, 255));
+        jlbl_visualizar2.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
+        jlbl_visualizar2.setForeground(new java.awt.Color(255, 255, 255));
+        jlbl_visualizar2.setText("EVENTOS");
+        getContentPane().add(jlbl_visualizar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 530, 220, 40));
+
+        jlbl_IMG_Evento2.setBackground(new java.awt.Color(135, 79, 255));
+        jlbl_IMG_Evento2.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
+        jlbl_IMG_Evento2.setForeground(new java.awt.Color(135, 79, 255));
+        jlbl_IMG_Evento2.setText("PRÓXIMOS");
+        getContentPane().add(jlbl_IMG_Evento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 530, 230, 40));
+
         jLabel7.setText("Data");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         jLabel8.setText("Data");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nome", "Tipo", "Data", "Fornecedor"
+            }
+        ));
+        jTable1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jTable1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 570, 450, 90));
 
         jTextField2.setText("Fornecedor Relacionado");
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 150, -1));
@@ -160,7 +263,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(129, 25, 184));
 
-        jLabel3.setText("Nome do evento");
+        jLabel3.setText("Pesquisar Evento");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -169,7 +272,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,9 +298,8 @@ public class Visualização_Evento extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        
-        cadastro_evento ce = new cadastro_evento();
-        ce.setVisible(true);
-        this.dispose();
+        Editar_Evento ee = new Editar_Evento();
+        ee.setVisible(true);
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -256,6 +358,17 @@ public class Visualização_Evento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxt_statusEventoActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        cadastro_evento ce = new cadastro_evento();
+        ce.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTable1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable1AncestorAdded
+        // TODO add your handling code here:
+        this.jTable1("SELECT * FROM Evento ORDER BY DataEvento_inicial DESC LIMIT 3");
+    }//GEN-LAST:event_jTable1AncestorAdded
+
     
     /**
      * @param args the command line arguments
@@ -296,8 +409,11 @@ public class Visualização_Evento extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -305,12 +421,19 @@ public class Visualização_Evento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jlbl_IMG_Evento;
+    private javax.swing.JLabel jlbl_IMG_Evento1;
+    private javax.swing.JLabel jlbl_IMG_Evento2;
     private javax.swing.JLabel jlbl_background;
     private javax.swing.JLabel jlbl_visualizar;
+    private javax.swing.JLabel jlbl_visualizar1;
+    private javax.swing.JLabel jlbl_visualizar2;
     private javax.swing.JTextField jtxt_contatoEvento;
     private javax.swing.JTextField jtxt_statusEvento;
     private javax.swing.JTextField jtxt_tipoEvento;
