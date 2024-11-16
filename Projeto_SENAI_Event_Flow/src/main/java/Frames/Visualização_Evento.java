@@ -91,10 +91,12 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jlbl_IMG_Evento2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jTextField2 = new javax.swing.JTextField();
         jtxt_statusEvento = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jlbl_background = new javax.swing.JLabel();
@@ -205,8 +207,8 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jLabel4.setText("Nome do evento");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 130, -1));
 
-        jLabel6.setText("Fornecedor");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, -1));
+        jLabel6.setText("ID");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, -1));
 
         jlbl_visualizar2.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar2.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
@@ -225,6 +227,9 @@ public class Visualização_Evento extends javax.swing.JFrame {
 
         jLabel8.setText("Data");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+
+        jLabel12.setText("Fornecedor");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -260,6 +265,9 @@ public class Visualização_Evento extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jtxt_statusEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 140, -1));
+
+        jTextField3.setText("ID do evento");
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 150, -1));
 
         jPanel1.setBackground(new java.awt.Color(129, 25, 184));
 
@@ -320,7 +328,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
             String password = "";
             
             con = DriverManager.getConnection(url, user, password);
-            String sql = "SELECT TituloEvento, TipoEvento, Contato_Evento, DataEvento_inicial FROM Evento WHERE TituloEvento = ?"; 
+            String sql = "SELECT TituloEvento, TipoEvento, Contato_Evento, DataEvento_inicial, ID_Evento FROM Evento WHERE TituloEvento = ?"; 
             
             statement = con.prepareStatement(sql);
             statement.setString(1, jTextField1.getText());
@@ -339,6 +347,10 @@ public class Visualização_Evento extends javax.swing.JFrame {
                         
                 String DataEvento_inicial = resultset.getString("DataEvento_inicial");
                 jtxt_statusEvento.setText(DataEvento_inicial);
+                
+                String ID_Evento = resultset.getString("ID_Evento");
+                jTextField3.setText(ID_Evento);
+                
             }
             else{
                 JOptionPane.showMessageDialog(null, "Titulo de evento não encontrado.");
@@ -414,6 +426,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -427,6 +440,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel jlbl_IMG_Evento;
     private javax.swing.JLabel jlbl_IMG_Evento1;
     private javax.swing.JLabel jlbl_IMG_Evento2;

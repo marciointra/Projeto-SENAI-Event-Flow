@@ -6,11 +6,13 @@ package Frames;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import static java.sql.DriverManager.getConnection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -64,10 +66,28 @@ public void c(String sql){
     private void initComponents() {
 
         jlbl_visualizar = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        dt_inicinio = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jTextField4 = new javax.swing.JTextField();
+        idevento = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         c = new javax.swing.JTable();
         background = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -77,6 +97,103 @@ public void c(String sql){
         jlbl_visualizar.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar.setText("EDITAR");
         getContentPane().add(jlbl_visualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 60));
+
+        jLabel6.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Data de início");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
+
+        dt_inicinio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dt_inicinioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(dt_inicinio, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 350, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 350, -1));
+
+        jLabel7.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Responsável do Evento");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
+
+        jLabel9.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("ID");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, -1, 10));
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 350, -1));
+
+        jButton1.setBackground(new java.awt.Color(135, 79, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 40, 30));
+
+        jLabel2.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Titulo Evento");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+
+        jLabel10.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Data Final");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(135, 79, 255));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Atualizar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 580, 90, -1));
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 350, -1));
+
+        idevento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ideventoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(idevento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 300, -1));
+
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 350, -1));
+
+        jLabel5.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Meio de contato");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Insira o ID do evento");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
         c.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -107,18 +224,132 @@ public void c(String sql){
         background.setForeground(new java.awt.Color(135, 79, 255));
         background.setText("EVENTO");
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 180, 60));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 350, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 280, -1));
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Titulo Evento");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://localhost:3306/EventFlow";
+            String user = "root";
+            String password = "";
+            
+            conexao = DriverManager.getConnection(url, user, password);
+            String sql = "SELECT ID_Evento, TituloEvento, DescricaoEvento, Contato_Evento, Responsavel_Evento, DataEvento_inicial, DataEvento_Final FROM Evento WHERE ID_Evento = ?";
+
+            
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, jTextField1.getText());
+           // statement.setInt(1, Integer.parseInt(jTextField1.getText()));
+            
+            
+             ResultSet resultSet =  statement.executeQuery();
+             if(resultSet.next()){
+                 
+                 //inserir o id tmb no jtext de 
+                 
+                 String ID_Evento = resultSet.getString("ID_Evento");
+                 idevento.setText(ID_Evento);
+                 
+                 String TituloEvento = resultSet.getString("TituloEvento");
+                 jTextField2.setText(TituloEvento);
+                 
+                 String DescricaoEvento = resultSet.getString("DescricaoEvento");
+                 jTextField3.setText(DescricaoEvento);
+                 
+                 String Contato_Evento = resultSet.getString("Contato_Evento");
+                 jTextField4.setText(Contato_Evento);
+                 
+                 String Responsavel_Evento = resultSet.getString("Responsavel_Evento");
+                 jTextField6.setText(Responsavel_Evento);
+                 
+                 String DataEvento_inicial = resultSet.getString("DataEvento_inicial");
+                 dt_inicinio.setText(DataEvento_inicial);
+                 
+                 String DataEvento_Final = resultSet.getString("DataEvento_final");
+                 jTextField9.setText(DataEvento_Final);
+             }
+             else{
+                 JOptionPane.showMessageDialog(null, "Evento não encontrado. tente novamente.");
+             }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Editar_Evento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void dt_inicinioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dt_inicinioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dt_inicinioActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void ideventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ideventoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ideventoActionPerformed
 
     private void cAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_cAncestorAdded
         // TODO add your handling code here:
         this.c("SELECT * FROM Evento ORDER BY TituloEvento DESC");
     }//GEN-LAST:event_cAncestorAdded
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            
+            String url = "jdbc:mysql://localhost:3306/EventFlow";
+            String usuario = "root";
+            String senha = "";
+            
+            conexao = DriverManager.getConnection(url, usuario, senha);
+            String sql = "UPDATE Evento SET TituloEvento = ?, Contato_Evento = ?, Responsavel_Evento = ?, DataEvento_inicial = ?, DataEvento_Final = ? WHERE ID_Evento = ?";
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, jTextField2.getText());
+            statement.setString(2, jTextField4.getText());
+            statement.setString(3, jTextField6.getText());
+            statement.setString(4, dt_inicinio.getText());
+            statement.setString(5, jTextField9.getText());
+            statement.setString(6, idevento.getText());
+            
+            statement.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Registro atualizado!");
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(Editar_Evento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,8 +389,26 @@ public void c(String sql){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JTable c;
+    private javax.swing.JTextField dt_inicinio;
+    private javax.swing.JTextField idevento;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel jlbl_visualizar;
     // End of variables declaration//GEN-END:variables
 

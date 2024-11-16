@@ -4,6 +4,15 @@
  */
 package Frames;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author wpass
@@ -16,7 +25,8 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
     public Visualização_fornecedor() {
         initComponents();
     }
-
+    
+        
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,7 +38,13 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
 
         jlbl_IMG_Evento = new javax.swing.JLabel();
         jlbl_visualizar = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,13 +54,41 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
         jlbl_IMG_Evento.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
         jlbl_IMG_Evento.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_IMG_Evento.setText("FORNECEDOR");
-        getContentPane().add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 120, 300, 60));
+        getContentPane().add(jlbl_IMG_Evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 120, 300, 60));
 
         jlbl_visualizar.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
         jlbl_visualizar.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar.setText("VISUALIZAR");
-        getContentPane().add(jlbl_visualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 270, 60));
+        getContentPane().add(jlbl_visualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, 270, 60));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Editar Fornecedor");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 200, -1, 20));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Fornecedores cadastrados");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, -1, 40));
+
+        jButton6.setBackground(new java.awt.Color(129, 25, 184));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 180, 160, 60));
+
+        jButton7.setBackground(new java.awt.Color(129, 25, 184));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 160, 60));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cadastrar Fornecedor");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, -1, 40));
 
         jButton2.setBackground(new java.awt.Color(110, 21, 189));
         jButton2.setForeground(new java.awt.Color(110, 21, 189));
@@ -55,6 +99,14 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 140, 50, 30));
+
+        jButton5.setBackground(new java.awt.Color(129, 25, 184));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 130, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Event.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, -1));
@@ -67,6 +119,24 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
         dash.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        cadastro_fornecedor cf = new cadastro_fornecedor();
+        cf.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        EditarFornecedor ef = new EditarFornecedor();
+        ef.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        bisualizar_fornecedor bf = new bisualizar_fornecedor();
+        bf.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,6 +164,9 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Visualização_fornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -105,7 +178,13 @@ public class Visualização_fornecedor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jlbl_IMG_Evento;
     private javax.swing.JLabel jlbl_visualizar;
     // End of variables declaration//GEN-END:variables

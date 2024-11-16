@@ -369,9 +369,10 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
             statement.setString(5, jcbx_Tipo_Servico.getSelectedItem().toString());
             statement.setString(6, jcbx_Estatus.getSelectedItem().toString());
             
+            statement.executeUpdate();
             System.out.println("Deu certo!");
             JOptionPane.showMessageDialog(null, "Fornecedor cadastrado com sucesso!");
-            statement.executeUpdate();
+            
             
             Visualização_fornecedor vf = new Visualização_fornecedor();
             vf.setVisible(true);
@@ -416,9 +417,8 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-Dashboard dash = new Dashboard();
-        dash.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+       Visualização_fornecedor cc = new Visualização_fornecedor();
+        cc.setVisible(true);     // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
