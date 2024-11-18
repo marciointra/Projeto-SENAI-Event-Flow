@@ -106,7 +106,12 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 180, 60));
 
         jButton4.setBackground(new java.awt.Color(129, 25, 184));
-        jButton4.setText("Participantes");
+        jButton4.setText("Equipe");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 120, 60));
 
         jButton5.setBackground(new java.awt.Color(129, 25, 184));
@@ -207,9 +212,36 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        cadastro_expositor ce = new cadastro_expositor();
-        ce.setVisible(true);
-        this.dispose();
+          try {
+            // TODO add your handling code here:
+            Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/EventFlow", "root", "");
+            String sql = "SELECT COUNT(*) AS total FROM Fornecedor";
+            PreparedStatement statement = conexao.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+            
+            if(resultSet.next()){
+                int totalFornecedor = resultSet.getInt("total");
+                
+                if(totalFornecedor > 0){
+                    
+                    // se for maior que zero, ele é redirecionado para a tela de visualização de eventos
+                    Visualizar_Expositor visualizarEventos = new Visualizar_Expositor();
+                    visualizarEventos.setVisible(true); 
+                }
+                  
+                else{
+                    // Redirecionando para a tela de cadsatro de evento
+                    JOptionPane.showMessageDialog(null, "Nenhum expositor registrado");
+                    cadastro_expositor ce = new cadastro_expositor();
+                    ce.setVisible(true);
+                }
+                
+                this.dispose();
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void JbutPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbutPesquisarActionPerformed
@@ -218,6 +250,40 @@ public class Dashboard extends javax.swing.JFrame {
         tpe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_JbutPesquisarActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+                try {
+            // TODO add your handling code here:
+            Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/EventFlow", "root", "");
+            String sql = "SELECT COUNT(*) AS total FROM funcionario";
+            PreparedStatement statement = conexao.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+            
+            if(resultSet.next()){
+                int totalEventos = resultSet.getInt("total");
+                
+                if(totalEventos > 0){
+                    
+                    // se for maior que zero, ele é redirecionado para a tela de visualização de eventos
+                    Visualizar_Funcionario VF = new Visualizar_Funcionario();
+                    VF.setVisible(true); 
+                }
+                  
+                else{
+                    // Redirecionando para a tela de cadsatro de evento
+                    JOptionPane.showMessageDialog(null, "Nenhum fornecedor registrado");
+                    cadastro_evento cadastroEvento = new cadastro_evento();
+                    cadastroEvento.setVisible(true);
+                }
+                
+                this.dispose();
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

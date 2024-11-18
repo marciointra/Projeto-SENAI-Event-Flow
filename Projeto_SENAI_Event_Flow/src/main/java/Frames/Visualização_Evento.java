@@ -90,7 +90,6 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jlbl_visualizar2 = new javax.swing.JLabel();
         jlbl_IMG_Evento2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -148,7 +147,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 190, 130, 60));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 150, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 300, -1));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 210, 20));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
@@ -162,7 +161,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 320, 30, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 318, 30, 30));
 
         jButton5.setBackground(new java.awt.Color(129, 25, 184));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -173,10 +172,10 @@ public class Visualização_Evento extends javax.swing.JFrame {
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 130, 60));
 
         jtxt_titulo.setText("TituloEvento");
-        getContentPane().add(jtxt_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 140, -1));
+        getContentPane().add(jtxt_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 140, -1));
 
         jtxt_tipoEvento.setText("TipoEvento");
-        getContentPane().add(jtxt_tipoEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 150, -1));
+        getContentPane().add(jtxt_tipoEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 150, -1));
 
         jtxt_contatoEvento.setText("Contato_Evento");
         jtxt_contatoEvento.addActionListener(new java.awt.event.ActionListener() {
@@ -184,10 +183,10 @@ public class Visualização_Evento extends javax.swing.JFrame {
                 jtxt_contatoEventoActionPerformed(evt);
             }
         });
-        getContentPane().add(jtxt_contatoEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 150, -1));
+        getContentPane().add(jtxt_contatoEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 150, -1));
 
         jLabel2.setText("Meio de contato");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 150, 20));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 150, 20));
 
         jlbl_visualizar1.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar1.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
@@ -202,34 +201,31 @@ public class Visualização_Evento extends javax.swing.JFrame {
         getContentPane().add(jlbl_IMG_Evento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 120, 180, 60));
 
         jLabel5.setText("Tipo do evento");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 150, 20));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 150, 20));
 
         jLabel4.setText("Nome do evento");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 130, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 130, -1));
 
         jLabel6.setText("ID");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
 
         jlbl_visualizar2.setBackground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar2.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
         jlbl_visualizar2.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_visualizar2.setText("EVENTOS");
-        getContentPane().add(jlbl_visualizar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 530, 220, 40));
+        getContentPane().add(jlbl_visualizar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 220, 40));
 
         jlbl_IMG_Evento2.setBackground(new java.awt.Color(135, 79, 255));
         jlbl_IMG_Evento2.setFont(new java.awt.Font("Arial Black", 3, 36)); // NOI18N
         jlbl_IMG_Evento2.setForeground(new java.awt.Color(135, 79, 255));
         jlbl_IMG_Evento2.setText("PRÓXIMOS");
-        getContentPane().add(jlbl_IMG_Evento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 530, 230, 40));
+        getContentPane().add(jlbl_IMG_Evento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, 230, 40));
 
         jLabel7.setText("Data");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
-
-        jLabel8.setText("Data");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         jLabel12.setText("Fornecedor");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -253,10 +249,10 @@ public class Visualização_Evento extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 570, 450, 90));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 560, 450, 100));
 
         jTextField2.setText("Fornecedor Relacionado");
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 150, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 150, -1));
 
         jtxt_statusEvento.setText("Data do evento");
         jtxt_statusEvento.addActionListener(new java.awt.event.ActionListener() {
@@ -264,13 +260,15 @@ public class Visualização_Evento extends javax.swing.JFrame {
                 jtxt_statusEventoActionPerformed(evt);
             }
         });
-        getContentPane().add(jtxt_statusEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 140, -1));
+        getContentPane().add(jtxt_statusEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 140, -1));
 
         jTextField3.setText("ID do evento");
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 150, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 150, -1));
 
         jPanel1.setBackground(new java.awt.Color(129, 25, 184));
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Pesquisar Evento");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -278,9 +276,9 @@ public class Visualização_Evento extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(65, 65, 65)
                 .addComponent(jLabel3)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,7 +287,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
                 .addGap(0, 4, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, 310, 20));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, 220, 20));
 
         jlbl_background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Event.jpg"))); // NOI18N
         getContentPane().add(jlbl_background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -378,7 +376,7 @@ public class Visualização_Evento extends javax.swing.JFrame {
 
     private void jTable1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTable1AncestorAdded
         // TODO add your handling code here:
-        this.jTable1("SELECT * FROM Evento ORDER BY DataEvento_inicial DESC LIMIT 3");
+        this.jTable1("SELECT * FROM Evento ORDER BY DataEvento_inicial ASC LIMIT 3");
     }//GEN-LAST:event_jTable1AncestorAdded
 
     
@@ -433,7 +431,6 @@ public class Visualização_Evento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

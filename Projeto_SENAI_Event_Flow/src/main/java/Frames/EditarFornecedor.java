@@ -69,11 +69,14 @@ public class EditarFornecedor extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        status = new javax.swing.JTextField();
+        id = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        status1 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         servicos = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         id_fornecedor = new javax.swing.JTextField();
         cepfornecedor = new javax.swing.JTextField();
@@ -93,72 +96,89 @@ public class EditarFornecedor extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Serviços");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, 20));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, 20));
 
         jLabel4.setBackground(new java.awt.Color(135, 79, 255));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Insira o ID do fornecedor");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 360, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 360, -1));
 
         jLabel8.setBackground(new java.awt.Color(135, 79, 255));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Nome");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, 20));
-        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 360, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, 20));
+        getContentPane().add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 360, -1));
 
         jLabel10.setBackground(new java.awt.Color(135, 79, 255));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Status");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, 20));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, 20));
 
         jLabel7.setBackground(new java.awt.Color(135, 79, 255));
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Email");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 20));
-        getContentPane().add(servicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 360, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, 20));
+        getContentPane().add(status1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 360, -1));
+
+        jLabel11.setBackground(new java.awt.Color(135, 79, 255));
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("ID");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, 20));
+        getContentPane().add(servicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 360, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 3, 32)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(135, 79, 255));
         jLabel3.setText("FORNECEDOR");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 280, 50));
 
+        jButton2.setBackground(new java.awt.Color(135, 79, 255));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Atualizar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 590, 90, 20));
+
         jLabel9.setBackground(new java.awt.Color(135, 79, 255));
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("CEP");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, 20));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, 20));
 
         id_fornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 id_fornecedorActionPerformed(evt);
             }
         });
-        getContentPane().add(id_fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 360, -1));
+        getContentPane().add(id_fornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 360, -1));
 
         cepfornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cepfornecedorActionPerformed(evt);
             }
         });
-        getContentPane().add(cepfornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 360, -1));
+        getContentPane().add(cepfornecedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 360, -1));
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 360, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 360, -1));
 
         jButton1.setBackground(new java.awt.Color(135, 79, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
@@ -167,7 +187,7 @@ public class EditarFornecedor extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 40, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 40, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 3, 33)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -247,7 +267,7 @@ public class EditarFornecedor extends javax.swing.JFrame {
                 servicos.setText(Servicos);
 
                 String StatusFornecedorGeral = resultSet.getString("StatusFornecedorGeral");
-                status.setText(StatusFornecedorGeral);
+                id.setText(StatusFornecedorGeral);
                 
             }
             else{
@@ -274,6 +294,36 @@ public class EditarFornecedor extends javax.swing.JFrame {
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        try {
+            // TODO add your handling code here:
+            Connection conexao = null;
+            PreparedStatement statement = null;
+
+            String url = "jdbc:mysql://localhost:3306/EventFlow";
+            String usuario = "root";
+            String senha = "";
+
+            conexao = DriverManager.getConnection(url, usuario, senha);
+            String sql = "UPDATE Fornecedor SET Nome = ?, Email_Fornecedor = ?, CEPfornecedor = ?, Servicos = ?, StatusFornecedorGeral = ? WHERE ID_Fornecedor = ?";
+            statement = conexao.prepareStatement(sql);
+            statement.setString(1, jTextField1.getText());
+            statement.setString(2, jTextField3.getText());
+            statement.setString(3, cepfornecedor.getText());
+            statement.setString(4, servicos.getText());
+            statement.setString(5, status1.getText());
+            statement.setString(6, id.getText());
+
+            statement.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Registro atualizado!");
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(Editar_Evento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,10 +363,13 @@ public class EditarFornecedor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Jtbl;
     private javax.swing.JTextField cepfornecedor;
+    private javax.swing.JTextField id;
     private javax.swing.JTextField id_fornecedor;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -329,7 +382,7 @@ public class EditarFornecedor extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField servicos;
-    private javax.swing.JTextField status;
+    private javax.swing.JTextField status1;
     // End of variables declaration//GEN-END:variables
 
     private void Jtbl() {

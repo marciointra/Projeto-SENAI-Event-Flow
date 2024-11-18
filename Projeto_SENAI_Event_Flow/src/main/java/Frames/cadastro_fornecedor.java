@@ -278,7 +278,7 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jpnl_fundo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, -1, -1));
+        jpnl_fundo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, -1, -1));
 
         jlbl_BTN_Excluir.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
@@ -417,7 +417,7 @@ public class cadastro_fornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       Visualização_fornecedor cc = new Visualização_fornecedor();
+        Visualização_fornecedor cc = new Visualização_fornecedor();
         cc.setVisible(true);     // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

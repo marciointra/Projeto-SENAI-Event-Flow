@@ -73,20 +73,21 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Perfil = new javax.swing.JLabel();
         jlbl_IMG_Logo_EF = new javax.swing.JLabel();
         jlbl_IMG_Cadastrar = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jlbl_IMG_Fundo_Cadastrar = new javax.swing.JLabel();
         jlbl_IMG_Evento = new javax.swing.JLabel();
         jlbl_BTN_Buscar = new javax.swing.JLabel();
         jlbl_BTN_Excluir = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         Jbut_Confirmar = new javax.swing.JButton();
         jlbl_BTN_Salvar = new javax.swing.JLabel();
         img_user_expositor = new javax.swing.JLabel();
         jToggleButton1 = new javax.swing.JToggleButton();
         jlbl_FUNDO = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(920, 612));
         setName("cadastro_evento"); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpnl_fundo.setMinimumSize(new java.awt.Dimension(920, 612));
         jpnl_fundo.setPreferredSize(new java.awt.Dimension(920, 612));
@@ -261,6 +262,15 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_IMG_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
         jlbl_IMG_Cadastrar.setText("CADASTRAR");
         jpnl_fundo.add(jlbl_IMG_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, 60));
+
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/voltar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 50, 30));
         jpnl_fundo.add(jlbl_IMG_Fundo_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 310, -1));
 
         jlbl_IMG_Evento.setBackground(new java.awt.Color(135, 79, 255));
@@ -275,16 +285,9 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_BTN_Excluir.setToolTipText("");
         jpnl_fundo.add(jlbl_BTN_Excluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botao_voltar.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jpnl_fundo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 30));
-
+        Jbut_Confirmar.setBackground(new java.awt.Color(135, 79, 255));
         Jbut_Confirmar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        Jbut_Confirmar.setForeground(new java.awt.Color(135, 79, 255));
+        Jbut_Confirmar.setForeground(new java.awt.Color(255, 255, 255));
         Jbut_Confirmar.setText("Confirmar");
         Jbut_Confirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,20 +319,7 @@ public class cadastro_expositor extends javax.swing.JFrame {
         jlbl_FUNDO.setName("cadastro_evento"); // NOI18N
         jpnl_fundo.add(jlbl_FUNDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jpnl_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jpnl_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(jpnl_fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -381,12 +371,6 @@ public class cadastro_expositor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Jbut_ConfirmarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Dashboard dash = new Dashboard();
-        dash.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
 
@@ -416,6 +400,12 @@ public class cadastro_expositor extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Dashboard d = new Dashboard();
+        d.setVisible(true);     // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
