@@ -167,7 +167,7 @@ public class Cadastrar_Equipe extends javax.swing.JFrame {
         getContentPane().add(cccc, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 110, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpnl_fundo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, -1));
+        getContentPane().add(jLabel1, new AbsoluteConstraints(0, 0, 570, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -311,5 +311,10 @@ try {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jlbl_IMG_Cadastrar;
     private javax.swing.JLabel jlbl_IMG_Evento;
+
+    private class AbsoluteConstraints {
+        public AbsoluteConstraints(int i, int i1, int i2, int i3) {
+        }
+    }
     // End of variables declaration//GEN-END:variables
 }

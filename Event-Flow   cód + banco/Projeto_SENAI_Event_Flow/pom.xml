@@ -21,8 +21,8 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>org.netbeans.external</groupId>
-            <artifactId>AbsoluteLayout</artifactId>
+            <groupId>org.netbeans.modules</groupId>
+            <artifactId>org-netbeans-modules-form</artifactId>
             <version>RELEASE220</version>
         </dependency>
         <dependency>
